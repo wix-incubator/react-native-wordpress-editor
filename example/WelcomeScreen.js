@@ -13,8 +13,8 @@ export default class WelcomeScreen extends Component {
       title: 'Preview',
       passProps: {
         isNewPost: true,
-        ExternalNativeScreenClass: 'RNWordPressEditorViewController',
-        ExternalNativeScreenProps: {
+        externalNativeScreenClass: 'RNWordPressEditorViewController',
+        externalNativeScreenProps: {
           post: {title: 'Hello WorldPress', body: 'cool HTML body <br><br> <img src="https://www.wpshrug.com/wp-content/uploads/2016/05/wordpress-winning-meme.jpg" />'},
           placeHolders: {title: 'title', body: 'body'}
         }
