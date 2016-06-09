@@ -8,7 +8,7 @@ import {
 
 export default class WelcomeScreen extends Component {
   onPress() {
-    this.props.navigator.push({ // need to change to modal after issue with Media Manager is resolved.
+    this.props.navigator.push({
       screen: 'example.EditorScreen',
       title: 'Preview',
       passProps: {
