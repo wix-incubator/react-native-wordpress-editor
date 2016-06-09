@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {NativeModules} from 'react-native';
-
-var EditorManager = NativeModules.RNWordPressEditorManager;
+import EditorManager from 'react-native-wordpress-editor';
 
 export default class EditorScreen extends Component {
   static navigatorButtons = {
