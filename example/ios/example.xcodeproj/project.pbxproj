@@ -1,0 +1,1388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		00E356F31AD99517003FC87E /* exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* exampleTests.m */; };
+		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		D8D77E5D1D09A1C10050CFEA /* RNWordPressEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77E5C1D09A1C10050CFEA /* RNWordPressEditorViewController.m */; };
+		D8D77E6E1D09A2430050CFEA /* libReactNativeControllers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D77E6D1D09A23C0050CFEA /* libReactNativeControllers.a */; };
+		D8D77F0D1D09A37C0050CFEA /* editor.css in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E701D09A37C0050CFEA /* editor.css */; };
+		D8D77F0E1D09A37C0050CFEA /* editor.html in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E711D09A37C0050CFEA /* editor.html */; };
+		D8D77F0F1D09A37C0050CFEA /* icon-posts-editor-inspector.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E721D09A37C0050CFEA /* icon-posts-editor-inspector.png */; };
+		D8D77F101D09A37C0050CFEA /* icon-posts-editor-inspector@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E731D09A37C0050CFEA /* icon-posts-editor-inspector@2x.png */; };
+		D8D77F111D09A37C0050CFEA /* icon-posts-editor-inspector@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E741D09A37C0050CFEA /* icon-posts-editor-inspector@3x.png */; };
+		D8D77F121D09A37C0050CFEA /* icon-posts-editor-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E751D09A37C0050CFEA /* icon-posts-editor-preview.png */; };
+		D8D77F131D09A37C0050CFEA /* icon-posts-editor-preview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E761D09A37C0050CFEA /* icon-posts-editor-preview@2x.png */; };
+		D8D77F141D09A37C0050CFEA /* icon-posts-editor-preview@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E771D09A37C0050CFEA /* icon-posts-editor-preview@3x.png */; };
+		D8D77F151D09A37C0050CFEA /* icon_format_bold.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E781D09A37C0050CFEA /* icon_format_bold.png */; };
+		D8D77F161D09A37C0050CFEA /* icon_format_bold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E791D09A37C0050CFEA /* icon_format_bold@2x.png */; };
+		D8D77F171D09A37C0050CFEA /* icon_format_bold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E7A1D09A37C0050CFEA /* icon_format_bold@3x.png */; };
+		D8D77F181D09A37C0050CFEA /* icon_format_html.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E7B1D09A37C0050CFEA /* icon_format_html.png */; };
+		D8D77F191D09A37C0050CFEA /* icon_format_html@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E7C1D09A37C0050CFEA /* icon_format_html@2x.png */; };
+		D8D77F1A1D09A37C0050CFEA /* icon_format_html@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E7D1D09A37C0050CFEA /* icon_format_html@3x.png */; };
+		D8D77F1B1D09A37C0050CFEA /* icon_format_italic.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E7E1D09A37C0050CFEA /* icon_format_italic.png */; };
+		D8D77F1C1D09A37C0050CFEA /* icon_format_italic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E7F1D09A37C0050CFEA /* icon_format_italic@2x.png */; };
+		D8D77F1D1D09A37C0050CFEA /* icon_format_italic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E801D09A37C0050CFEA /* icon_format_italic@3x.png */; };
+		D8D77F1E1D09A37C0050CFEA /* icon_format_keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E811D09A37C0050CFEA /* icon_format_keyboard.png */; };
+		D8D77F1F1D09A37C0050CFEA /* icon_format_keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E821D09A37C0050CFEA /* icon_format_keyboard@2x.png */; };
+		D8D77F201D09A37C0050CFEA /* icon_format_link.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E831D09A37C0050CFEA /* icon_format_link.png */; };
+		D8D77F211D09A37C0050CFEA /* icon_format_link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E841D09A37C0050CFEA /* icon_format_link@2x.png */; };
+		D8D77F221D09A37C0050CFEA /* icon_format_link@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E851D09A37C0050CFEA /* icon_format_link@3x.png */; };
+		D8D77F231D09A37C0050CFEA /* icon_format_media.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E861D09A37C0050CFEA /* icon_format_media.png */; };
+		D8D77F241D09A37C0050CFEA /* icon_format_media@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E871D09A37C0050CFEA /* icon_format_media@2x.png */; };
+		D8D77F251D09A37C0050CFEA /* icon_format_media@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E881D09A37C0050CFEA /* icon_format_media@3x.png */; };
+		D8D77F261D09A37C0050CFEA /* icon_format_more.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E891D09A37C0050CFEA /* icon_format_more.png */; };
+		D8D77F271D09A37C0050CFEA /* icon_format_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E8A1D09A37C0050CFEA /* icon_format_more@2x.png */; };
+		D8D77F281D09A37C0050CFEA /* icon_format_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E8B1D09A37C0050CFEA /* icon_format_more@3x.png */; };
+		D8D77F291D09A37C0050CFEA /* icon_format_ol.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E8C1D09A37C0050CFEA /* icon_format_ol.png */; };
+		D8D77F2A1D09A37C0050CFEA /* icon_format_ol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E8D1D09A37C0050CFEA /* icon_format_ol@2x.png */; };
+		D8D77F2B1D09A37C0050CFEA /* icon_format_ol@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E8E1D09A37C0050CFEA /* icon_format_ol@3x.png */; };
+		D8D77F2C1D09A37C0050CFEA /* icon_format_quote.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E8F1D09A37C0050CFEA /* icon_format_quote.png */; };
+		D8D77F2D1D09A37C0050CFEA /* icon_format_quote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E901D09A37C0050CFEA /* icon_format_quote@2x.png */; };
+		D8D77F2E1D09A37C0050CFEA /* icon_format_quote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E911D09A37C0050CFEA /* icon_format_quote@3x.png */; };
+		D8D77F2F1D09A37C0050CFEA /* icon_format_strikethrough.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E921D09A37C0050CFEA /* icon_format_strikethrough.png */; };
+		D8D77F301D09A37C0050CFEA /* icon_format_strikethrough@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E931D09A37C0050CFEA /* icon_format_strikethrough@2x.png */; };
+		D8D77F311D09A37C0050CFEA /* icon_format_strikethrough@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E941D09A37C0050CFEA /* icon_format_strikethrough@3x.png */; };
+		D8D77F321D09A37C0050CFEA /* icon_format_ul.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E951D09A37C0050CFEA /* icon_format_ul.png */; };
+		D8D77F331D09A37C0050CFEA /* icon_format_ul@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E961D09A37C0050CFEA /* icon_format_ul@2x.png */; };
+		D8D77F341D09A37C0050CFEA /* icon_format_ul@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E971D09A37C0050CFEA /* icon_format_ul@3x.png */; };
+		D8D77F351D09A37C0050CFEA /* icon_format_underline.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E981D09A37C0050CFEA /* icon_format_underline.png */; };
+		D8D77F361D09A37C0050CFEA /* icon_format_underline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E991D09A37C0050CFEA /* icon_format_underline@2x.png */; };
+		D8D77F371D09A37C0050CFEA /* icon_format_unlink.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E9A1D09A37C0050CFEA /* icon_format_unlink.png */; };
+		D8D77F381D09A37C0050CFEA /* icon_format_unlink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E9B1D09A37C0050CFEA /* icon_format_unlink@2x.png */; };
+		D8D77F391D09A37C0050CFEA /* icon_options.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E9C1D09A37C0050CFEA /* icon_options.png */; };
+		D8D77F3A1D09A37C0050CFEA /* icon_options@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E9D1D09A37C0050CFEA /* icon_options@2x.png */; };
+		D8D77F3B1D09A37C0050CFEA /* icon_preview.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E9E1D09A37C0050CFEA /* icon_preview.png */; };
+		D8D77F3C1D09A37C0050CFEA /* icon_preview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77E9F1D09A37C0050CFEA /* icon_preview@2x.png */; };
+		D8D77F3D1D09A37C0050CFEA /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA01D09A37C0050CFEA /* jquery.js */; };
+		D8D77F3E1D09A37C0050CFEA /* jquery.mobile-events.min.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA11D09A37C0050CFEA /* jquery.mobile-events.min.js */; };
+		D8D77F3F1D09A37C0050CFEA /* js-beautifier.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA21D09A37C0050CFEA /* js-beautifier.js */; };
+		D8D77F401D09A37C0050CFEA /* rangy-classapplier.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA31D09A37C0050CFEA /* rangy-classapplier.js */; };
+		D8D77F411D09A37C0050CFEA /* rangy-core.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA41D09A37C0050CFEA /* rangy-core.js */; };
+		D8D77F421D09A37C0050CFEA /* rangy-highlighter.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA51D09A37C0050CFEA /* rangy-highlighter.js */; };
+		D8D77F431D09A37C0050CFEA /* rangy-selectionsaverestore.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA61D09A37C0050CFEA /* rangy-selectionsaverestore.js */; };
+		D8D77F441D09A37C0050CFEA /* rangy-serializer.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA71D09A37C0050CFEA /* rangy-serializer.js */; };
+		D8D77F451D09A37C0050CFEA /* rangy-textrange.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA81D09A37C0050CFEA /* rangy-textrange.js */; };
+		D8D77F461D09A37C0050CFEA /* shortcode.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EA91D09A37C0050CFEA /* shortcode.js */; };
+		D8D77F471D09A37C0050CFEA /* underscore-min.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EAA1D09A37C0050CFEA /* underscore-min.js */; };
+		D8D77F481D09A37C0050CFEA /* WPEditorFormatbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EAB1D09A37C0050CFEA /* WPEditorFormatbarView.xib */; };
+		D8D77F491D09A37C0050CFEA /* WPHybridCallbacker.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EAC1D09A37C0050CFEA /* WPHybridCallbacker.js */; };
+		D8D77F4A1D09A37C0050CFEA /* WPHybridLogger.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EAD1D09A37C0050CFEA /* WPHybridLogger.js */; };
+		D8D77F4B1D09A37C0050CFEA /* wpload.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EAE1D09A37C0050CFEA /* wpload.js */; };
+		D8D77F4C1D09A37C0050CFEA /* wpposter.svg in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EAF1D09A37C0050CFEA /* wpposter.svg */; };
+		D8D77F4D1D09A37C0050CFEA /* wpsave.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB01D09A37C0050CFEA /* wpsave.js */; };
+		D8D77F4E1D09A37C0050CFEA /* ZSSbgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB11D09A37C0050CFEA /* ZSSbgcolor.png */; };
+		D8D77F4F1D09A37C0050CFEA /* ZSSbgcolor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB21D09A37C0050CFEA /* ZSSbgcolor@2x.png */; };
+		D8D77F501D09A37C0050CFEA /* ZSScenterjustify.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB31D09A37C0050CFEA /* ZSScenterjustify.png */; };
+		D8D77F511D09A37C0050CFEA /* ZSScenterjustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB41D09A37C0050CFEA /* ZSScenterjustify@2x.png */; };
+		D8D77F521D09A37C0050CFEA /* ZSSclearstyle.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB51D09A37C0050CFEA /* ZSSclearstyle.png */; };
+		D8D77F531D09A37C0050CFEA /* ZSSclearstyle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB61D09A37C0050CFEA /* ZSSclearstyle@2x.png */; };
+		D8D77F541D09A37C0050CFEA /* ZSSforcejustify.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB71D09A37C0050CFEA /* ZSSforcejustify.png */; };
+		D8D77F551D09A37C0050CFEA /* ZSSforcejustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB81D09A37C0050CFEA /* ZSSforcejustify@2x.png */; };
+		D8D77F561D09A37C0050CFEA /* ZSSh1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EB91D09A37C0050CFEA /* ZSSh1.png */; };
+		D8D77F571D09A37C0050CFEA /* ZSSh1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EBA1D09A37C0050CFEA /* ZSSh1@2x.png */; };
+		D8D77F581D09A37C0050CFEA /* ZSSh2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EBB1D09A37C0050CFEA /* ZSSh2.png */; };
+		D8D77F591D09A37C0050CFEA /* ZSSh2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EBC1D09A37C0050CFEA /* ZSSh2@2x.png */; };
+		D8D77F5A1D09A37C0050CFEA /* ZSSh3.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EBD1D09A37C0050CFEA /* ZSSh3.png */; };
+		D8D77F5B1D09A37C0050CFEA /* ZSSh3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EBE1D09A37C0050CFEA /* ZSSh3@2x.png */; };
+		D8D77F5C1D09A37C0050CFEA /* ZSSh4.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EBF1D09A37C0050CFEA /* ZSSh4.png */; };
+		D8D77F5D1D09A37C0050CFEA /* ZSSh4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC01D09A37C0050CFEA /* ZSSh4@2x.png */; };
+		D8D77F5E1D09A37C0050CFEA /* ZSSh5.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC11D09A37C0050CFEA /* ZSSh5.png */; };
+		D8D77F5F1D09A37C0050CFEA /* ZSSh5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC21D09A37C0050CFEA /* ZSSh5@2x.png */; };
+		D8D77F601D09A37C0050CFEA /* ZSSh6.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC31D09A37C0050CFEA /* ZSSh6.png */; };
+		D8D77F611D09A37C0050CFEA /* ZSSh6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC41D09A37C0050CFEA /* ZSSh6@2x.png */; };
+		D8D77F621D09A37C0050CFEA /* ZSShorizontalrule.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC51D09A37C0050CFEA /* ZSShorizontalrule.png */; };
+		D8D77F631D09A37C0050CFEA /* ZSShorizontalrule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC61D09A37C0050CFEA /* ZSShorizontalrule@2x.png */; };
+		D8D77F641D09A37C0050CFEA /* ZSSindent.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC71D09A37C0050CFEA /* ZSSindent.png */; };
+		D8D77F651D09A37C0050CFEA /* ZSSindent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC81D09A37C0050CFEA /* ZSSindent@2x.png */; };
+		D8D77F661D09A37C0050CFEA /* ZSSleftjustify.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EC91D09A37C0050CFEA /* ZSSleftjustify.png */; };
+		D8D77F671D09A37C0050CFEA /* ZSSleftjustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ECA1D09A37C0050CFEA /* ZSSleftjustify@2x.png */; };
+		D8D77F681D09A37C0050CFEA /* ZSSoutdent.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ECB1D09A37C0050CFEA /* ZSSoutdent.png */; };
+		D8D77F691D09A37C0050CFEA /* ZSSoutdent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ECC1D09A37C0050CFEA /* ZSSoutdent@2x.png */; };
+		D8D77F6A1D09A37C0050CFEA /* ZSSquicklink.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ECD1D09A37C0050CFEA /* ZSSquicklink.png */; };
+		D8D77F6B1D09A37C0050CFEA /* ZSSquicklink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ECE1D09A37C0050CFEA /* ZSSquicklink@2x.png */; };
+		D8D77F6C1D09A37C0050CFEA /* ZSSredo.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ECF1D09A37C0050CFEA /* ZSSredo.png */; };
+		D8D77F6D1D09A37C0050CFEA /* ZSSredo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED01D09A37C0050CFEA /* ZSSredo@2x.png */; };
+		D8D77F6E1D09A37C0050CFEA /* ZSSRichTextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED11D09A37C0050CFEA /* ZSSRichTextEditor.js */; };
+		D8D77F6F1D09A37C0050CFEA /* ZSSrightjustify.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED21D09A37C0050CFEA /* ZSSrightjustify.png */; };
+		D8D77F701D09A37C0050CFEA /* ZSSrightjustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED31D09A37C0050CFEA /* ZSSrightjustify@2x.png */; };
+		D8D77F711D09A37C0050CFEA /* ZSSsubscript.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED41D09A37C0050CFEA /* ZSSsubscript.png */; };
+		D8D77F721D09A37C0050CFEA /* ZSSsubscript@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED51D09A37C0050CFEA /* ZSSsubscript@2x.png */; };
+		D8D77F731D09A37C0050CFEA /* ZSSsuperscript.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED61D09A37C0050CFEA /* ZSSsuperscript.png */; };
+		D8D77F741D09A37C0050CFEA /* ZSSsuperscript@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED71D09A37C0050CFEA /* ZSSsuperscript@2x.png */; };
+		D8D77F751D09A37C0050CFEA /* ZSStextcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED81D09A37C0050CFEA /* ZSStextcolor.png */; };
+		D8D77F761D09A37C0050CFEA /* ZSStextcolor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77ED91D09A37C0050CFEA /* ZSStextcolor@2x.png */; };
+		D8D77F771D09A37C0050CFEA /* ZSSundo.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EDA1D09A37C0050CFEA /* ZSSundo.png */; };
+		D8D77F781D09A37C0050CFEA /* ZSSundo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D77EDB1D09A37C0050CFEA /* ZSSundo@2x.png */; };
+		D8D77F791D09A37C0050CFEA /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EDE1D09A37C0050CFEA /* CYRLayoutManager.m */; };
+		D8D77F7A1D09A37C0050CFEA /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EE01D09A37C0050CFEA /* CYRTextStorage.m */; };
+		D8D77F7B1D09A37C0050CFEA /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EE21D09A37C0050CFEA /* CYRTextView.m */; };
+		D8D77F7C1D09A37C0050CFEA /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EE41D09A37C0050CFEA /* CYRToken.m */; };
+		D8D77F7D1D09A37C0050CFEA /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EE61D09A37C0050CFEA /* HRBrightnessCursor.m */; };
+		D8D77F7E1D09A37C0050CFEA /* HRCgUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EE81D09A37C0050CFEA /* HRCgUtil.m */; };
+		D8D77F7F1D09A37C0050CFEA /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EEA1D09A37C0050CFEA /* HRColorCursor.m */; };
+		D8D77F801D09A37C0050CFEA /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EED1D09A37C0050CFEA /* HRColorPickerView.m */; };
+		D8D77F811D09A37C0050CFEA /* HRColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EEF1D09A37C0050CFEA /* HRColorPickerViewController.m */; };
+		D8D77F821D09A37C0050CFEA /* HRColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EF11D09A37C0050CFEA /* HRColorUtil.m */; };
+		D8D77F831D09A37C0050CFEA /* UIWebView+GUIFixes.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EF31D09A37C0050CFEA /* UIWebView+GUIFixes.m */; };
+		D8D77F841D09A37C0050CFEA /* WPEditorField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EF61D09A37C0050CFEA /* WPEditorField.m */; };
+		D8D77F851D09A37C0050CFEA /* WPEditorFormatbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EF81D09A37C0050CFEA /* WPEditorFormatbarView.m */; };
+		D8D77F861D09A37C0050CFEA /* WPEditorLoggingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EFA1D09A37C0050CFEA /* WPEditorLoggingConfiguration.m */; };
+		D8D77F871D09A37C0050CFEA /* WPEditorToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EFC1D09A37C0050CFEA /* WPEditorToolbarButton.m */; };
+		D8D77F881D09A37C0050CFEA /* WPEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77EFE1D09A37C0050CFEA /* WPEditorView.m */; };
+		D8D77F891D09A37C0050CFEA /* WPEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F001D09A37C0050CFEA /* WPEditorViewController.m */; };
+		D8D77F8A1D09A37C0050CFEA /* WPImageMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F021D09A37C0050CFEA /* WPImageMeta.m */; };
+		D8D77F8B1D09A37C0050CFEA /* WPLegacyEditorFormatAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F041D09A37C0050CFEA /* WPLegacyEditorFormatAction.m */; };
+		D8D77F8C1D09A37C0050CFEA /* WPLegacyEditorFormatToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F061D09A37C0050CFEA /* WPLegacyEditorFormatToolbar.m */; };
+		D8D77F8D1D09A37C0050CFEA /* WPLegacyEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F081D09A37C0050CFEA /* WPLegacyEditorViewController.m */; };
+		D8D77F8E1D09A37C0050CFEA /* ZSSBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F0A1D09A37C0050CFEA /* ZSSBarButtonItem.m */; };
+		D8D77F8F1D09A37C0050CFEA /* ZSSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F0C1D09A37C0050CFEA /* ZSSTextView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTActionSheet;
+		};
+		00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTGeolocation;
+		};
+		00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTImage;
+		};
+		00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B511DB1A9E6C8500147676;
+			remoteInfo = RCTNetwork;
+		};
+		00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
+			remoteInfo = RCTVibration;
+		};
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = example;
+		};
+		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTSettings;
+		};
+		139FDEF31B06529B00C62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C86DF461ADF2C930047B81A;
+			remoteInfo = RCTWebSocket;
+		};
+		146834031AC3E56700842450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTLinking;
+		};
+		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
+			remoteInfo = RCTText;
+		};
+		D8D77E6C1D09A23C0050CFEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8D77E681D09A23C0050CFEA /* ReactNativeControllers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
+			remoteInfo = ReactNativeControllers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
+		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
+		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
+		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
+		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = exampleTests.m; sourceTree = "<group>"; };
+		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
+		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = example/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = example/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = example/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = example/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = example/main.m; sourceTree = "<group>"; };
+		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		D8D77E5B1D09A1C10050CFEA /* RNWordPressEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNWordPressEditorViewController.h; path = "../node_modules/react-native-wordpress-editor/ios/RNWordPressEditorViewController.h"; sourceTree = "<group>"; };
+		D8D77E5C1D09A1C10050CFEA /* RNWordPressEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNWordPressEditorViewController.m; path = "../node_modules/react-native-wordpress-editor/ios/RNWordPressEditorViewController.m"; sourceTree = "<group>"; };
+		D8D77E681D09A23C0050CFEA /* ReactNativeControllers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeControllers.xcodeproj; path = "../node_modules/react-native-controllers/ios/ReactNativeControllers.xcodeproj"; sourceTree = "<group>"; };
+		D8D77E701D09A37C0050CFEA /* editor.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = editor.css; sourceTree = "<group>"; };
+		D8D77E711D09A37C0050CFEA /* editor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = editor.html; sourceTree = "<group>"; };
+		D8D77E721D09A37C0050CFEA /* icon-posts-editor-inspector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-posts-editor-inspector.png"; sourceTree = "<group>"; };
+		D8D77E731D09A37C0050CFEA /* icon-posts-editor-inspector@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-posts-editor-inspector@2x.png"; sourceTree = "<group>"; };
+		D8D77E741D09A37C0050CFEA /* icon-posts-editor-inspector@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-posts-editor-inspector@3x.png"; sourceTree = "<group>"; };
+		D8D77E751D09A37C0050CFEA /* icon-posts-editor-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-posts-editor-preview.png"; sourceTree = "<group>"; };
+		D8D77E761D09A37C0050CFEA /* icon-posts-editor-preview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-posts-editor-preview@2x.png"; sourceTree = "<group>"; };
+		D8D77E771D09A37C0050CFEA /* icon-posts-editor-preview@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-posts-editor-preview@3x.png"; sourceTree = "<group>"; };
+		D8D77E781D09A37C0050CFEA /* icon_format_bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_bold.png; sourceTree = "<group>"; };
+		D8D77E791D09A37C0050CFEA /* icon_format_bold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_bold@2x.png"; sourceTree = "<group>"; };
+		D8D77E7A1D09A37C0050CFEA /* icon_format_bold@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_bold@3x.png"; sourceTree = "<group>"; };
+		D8D77E7B1D09A37C0050CFEA /* icon_format_html.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_html.png; sourceTree = "<group>"; };
+		D8D77E7C1D09A37C0050CFEA /* icon_format_html@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_html@2x.png"; sourceTree = "<group>"; };
+		D8D77E7D1D09A37C0050CFEA /* icon_format_html@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_html@3x.png"; sourceTree = "<group>"; };
+		D8D77E7E1D09A37C0050CFEA /* icon_format_italic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_italic.png; sourceTree = "<group>"; };
+		D8D77E7F1D09A37C0050CFEA /* icon_format_italic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_italic@2x.png"; sourceTree = "<group>"; };
+		D8D77E801D09A37C0050CFEA /* icon_format_italic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_italic@3x.png"; sourceTree = "<group>"; };
+		D8D77E811D09A37C0050CFEA /* icon_format_keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_keyboard.png; sourceTree = "<group>"; };
+		D8D77E821D09A37C0050CFEA /* icon_format_keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_keyboard@2x.png"; sourceTree = "<group>"; };
+		D8D77E831D09A37C0050CFEA /* icon_format_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_link.png; sourceTree = "<group>"; };
+		D8D77E841D09A37C0050CFEA /* icon_format_link@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_link@2x.png"; sourceTree = "<group>"; };
+		D8D77E851D09A37C0050CFEA /* icon_format_link@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_link@3x.png"; sourceTree = "<group>"; };
+		D8D77E861D09A37C0050CFEA /* icon_format_media.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_media.png; sourceTree = "<group>"; };
+		D8D77E871D09A37C0050CFEA /* icon_format_media@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_media@2x.png"; sourceTree = "<group>"; };
+		D8D77E881D09A37C0050CFEA /* icon_format_media@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_media@3x.png"; sourceTree = "<group>"; };
+		D8D77E891D09A37C0050CFEA /* icon_format_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_more.png; sourceTree = "<group>"; };
+		D8D77E8A1D09A37C0050CFEA /* icon_format_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_more@2x.png"; sourceTree = "<group>"; };
+		D8D77E8B1D09A37C0050CFEA /* icon_format_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_more@3x.png"; sourceTree = "<group>"; };
+		D8D77E8C1D09A37C0050CFEA /* icon_format_ol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_ol.png; sourceTree = "<group>"; };
+		D8D77E8D1D09A37C0050CFEA /* icon_format_ol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_ol@2x.png"; sourceTree = "<group>"; };
+		D8D77E8E1D09A37C0050CFEA /* icon_format_ol@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_ol@3x.png"; sourceTree = "<group>"; };
+		D8D77E8F1D09A37C0050CFEA /* icon_format_quote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_quote.png; sourceTree = "<group>"; };
+		D8D77E901D09A37C0050CFEA /* icon_format_quote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_quote@2x.png"; sourceTree = "<group>"; };
+		D8D77E911D09A37C0050CFEA /* icon_format_quote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_quote@3x.png"; sourceTree = "<group>"; };
+		D8D77E921D09A37C0050CFEA /* icon_format_strikethrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_strikethrough.png; sourceTree = "<group>"; };
+		D8D77E931D09A37C0050CFEA /* icon_format_strikethrough@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_strikethrough@2x.png"; sourceTree = "<group>"; };
+		D8D77E941D09A37C0050CFEA /* icon_format_strikethrough@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_strikethrough@3x.png"; sourceTree = "<group>"; };
+		D8D77E951D09A37C0050CFEA /* icon_format_ul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_ul.png; sourceTree = "<group>"; };
+		D8D77E961D09A37C0050CFEA /* icon_format_ul@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_ul@2x.png"; sourceTree = "<group>"; };
+		D8D77E971D09A37C0050CFEA /* icon_format_ul@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_ul@3x.png"; sourceTree = "<group>"; };
+		D8D77E981D09A37C0050CFEA /* icon_format_underline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_underline.png; sourceTree = "<group>"; };
+		D8D77E991D09A37C0050CFEA /* icon_format_underline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_underline@2x.png"; sourceTree = "<group>"; };
+		D8D77E9A1D09A37C0050CFEA /* icon_format_unlink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_format_unlink.png; sourceTree = "<group>"; };
+		D8D77E9B1D09A37C0050CFEA /* icon_format_unlink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_format_unlink@2x.png"; sourceTree = "<group>"; };
+		D8D77E9C1D09A37C0050CFEA /* icon_options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_options.png; sourceTree = "<group>"; };
+		D8D77E9D1D09A37C0050CFEA /* icon_options@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_options@2x.png"; sourceTree = "<group>"; };
+		D8D77E9E1D09A37C0050CFEA /* icon_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_preview.png; sourceTree = "<group>"; };
+		D8D77E9F1D09A37C0050CFEA /* icon_preview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_preview@2x.png"; sourceTree = "<group>"; };
+		D8D77EA01D09A37C0050CFEA /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		D8D77EA11D09A37C0050CFEA /* jquery.mobile-events.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-events.min.js"; sourceTree = "<group>"; };
+		D8D77EA21D09A37C0050CFEA /* js-beautifier.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "js-beautifier.js"; sourceTree = "<group>"; };
+		D8D77EA31D09A37C0050CFEA /* rangy-classapplier.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "rangy-classapplier.js"; sourceTree = "<group>"; };
+		D8D77EA41D09A37C0050CFEA /* rangy-core.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "rangy-core.js"; sourceTree = "<group>"; };
+		D8D77EA51D09A37C0050CFEA /* rangy-highlighter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "rangy-highlighter.js"; sourceTree = "<group>"; };
+		D8D77EA61D09A37C0050CFEA /* rangy-selectionsaverestore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "rangy-selectionsaverestore.js"; sourceTree = "<group>"; };
+		D8D77EA71D09A37C0050CFEA /* rangy-serializer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "rangy-serializer.js"; sourceTree = "<group>"; };
+		D8D77EA81D09A37C0050CFEA /* rangy-textrange.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "rangy-textrange.js"; sourceTree = "<group>"; };
+		D8D77EA91D09A37C0050CFEA /* shortcode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shortcode.js; sourceTree = "<group>"; };
+		D8D77EAA1D09A37C0050CFEA /* underscore-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "underscore-min.js"; sourceTree = "<group>"; };
+		D8D77EAB1D09A37C0050CFEA /* WPEditorFormatbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPEditorFormatbarView.xib; sourceTree = "<group>"; };
+		D8D77EAC1D09A37C0050CFEA /* WPHybridCallbacker.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = WPHybridCallbacker.js; sourceTree = "<group>"; };
+		D8D77EAD1D09A37C0050CFEA /* WPHybridLogger.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = WPHybridLogger.js; sourceTree = "<group>"; };
+		D8D77EAE1D09A37C0050CFEA /* wpload.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wpload.js; sourceTree = "<group>"; };
+		D8D77EAF1D09A37C0050CFEA /* wpposter.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = wpposter.svg; sourceTree = "<group>"; };
+		D8D77EB01D09A37C0050CFEA /* wpsave.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wpsave.js; sourceTree = "<group>"; };
+		D8D77EB11D09A37C0050CFEA /* ZSSbgcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSbgcolor.png; sourceTree = "<group>"; };
+		D8D77EB21D09A37C0050CFEA /* ZSSbgcolor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSbgcolor@2x.png"; sourceTree = "<group>"; };
+		D8D77EB31D09A37C0050CFEA /* ZSScenterjustify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSScenterjustify.png; sourceTree = "<group>"; };
+		D8D77EB41D09A37C0050CFEA /* ZSScenterjustify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSScenterjustify@2x.png"; sourceTree = "<group>"; };
+		D8D77EB51D09A37C0050CFEA /* ZSSclearstyle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSclearstyle.png; sourceTree = "<group>"; };
+		D8D77EB61D09A37C0050CFEA /* ZSSclearstyle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSclearstyle@2x.png"; sourceTree = "<group>"; };
+		D8D77EB71D09A37C0050CFEA /* ZSSforcejustify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSforcejustify.png; sourceTree = "<group>"; };
+		D8D77EB81D09A37C0050CFEA /* ZSSforcejustify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSforcejustify@2x.png"; sourceTree = "<group>"; };
+		D8D77EB91D09A37C0050CFEA /* ZSSh1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSh1.png; sourceTree = "<group>"; };
+		D8D77EBA1D09A37C0050CFEA /* ZSSh1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSh1@2x.png"; sourceTree = "<group>"; };
+		D8D77EBB1D09A37C0050CFEA /* ZSSh2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSh2.png; sourceTree = "<group>"; };
+		D8D77EBC1D09A37C0050CFEA /* ZSSh2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSh2@2x.png"; sourceTree = "<group>"; };
+		D8D77EBD1D09A37C0050CFEA /* ZSSh3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSh3.png; sourceTree = "<group>"; };
+		D8D77EBE1D09A37C0050CFEA /* ZSSh3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSh3@2x.png"; sourceTree = "<group>"; };
+		D8D77EBF1D09A37C0050CFEA /* ZSSh4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSh4.png; sourceTree = "<group>"; };
+		D8D77EC01D09A37C0050CFEA /* ZSSh4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSh4@2x.png"; sourceTree = "<group>"; };
+		D8D77EC11D09A37C0050CFEA /* ZSSh5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSh5.png; sourceTree = "<group>"; };
+		D8D77EC21D09A37C0050CFEA /* ZSSh5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSh5@2x.png"; sourceTree = "<group>"; };
+		D8D77EC31D09A37C0050CFEA /* ZSSh6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSh6.png; sourceTree = "<group>"; };
+		D8D77EC41D09A37C0050CFEA /* ZSSh6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSh6@2x.png"; sourceTree = "<group>"; };
+		D8D77EC51D09A37C0050CFEA /* ZSShorizontalrule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSShorizontalrule.png; sourceTree = "<group>"; };
+		D8D77EC61D09A37C0050CFEA /* ZSShorizontalrule@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSShorizontalrule@2x.png"; sourceTree = "<group>"; };
+		D8D77EC71D09A37C0050CFEA /* ZSSindent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSindent.png; sourceTree = "<group>"; };
+		D8D77EC81D09A37C0050CFEA /* ZSSindent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSindent@2x.png"; sourceTree = "<group>"; };
+		D8D77EC91D09A37C0050CFEA /* ZSSleftjustify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSleftjustify.png; sourceTree = "<group>"; };
+		D8D77ECA1D09A37C0050CFEA /* ZSSleftjustify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSleftjustify@2x.png"; sourceTree = "<group>"; };
+		D8D77ECB1D09A37C0050CFEA /* ZSSoutdent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSoutdent.png; sourceTree = "<group>"; };
+		D8D77ECC1D09A37C0050CFEA /* ZSSoutdent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSoutdent@2x.png"; sourceTree = "<group>"; };
+		D8D77ECD1D09A37C0050CFEA /* ZSSquicklink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSquicklink.png; sourceTree = "<group>"; };
+		D8D77ECE1D09A37C0050CFEA /* ZSSquicklink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSquicklink@2x.png"; sourceTree = "<group>"; };
+		D8D77ECF1D09A37C0050CFEA /* ZSSredo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSredo.png; sourceTree = "<group>"; };
+		D8D77ED01D09A37C0050CFEA /* ZSSredo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSredo@2x.png"; sourceTree = "<group>"; };
+		D8D77ED11D09A37C0050CFEA /* ZSSRichTextEditor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ZSSRichTextEditor.js; sourceTree = "<group>"; };
+		D8D77ED21D09A37C0050CFEA /* ZSSrightjustify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSrightjustify.png; sourceTree = "<group>"; };
+		D8D77ED31D09A37C0050CFEA /* ZSSrightjustify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSrightjustify@2x.png"; sourceTree = "<group>"; };
+		D8D77ED41D09A37C0050CFEA /* ZSSsubscript.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSsubscript.png; sourceTree = "<group>"; };
+		D8D77ED51D09A37C0050CFEA /* ZSSsubscript@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSsubscript@2x.png"; sourceTree = "<group>"; };
+		D8D77ED61D09A37C0050CFEA /* ZSSsuperscript.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSsuperscript.png; sourceTree = "<group>"; };
+		D8D77ED71D09A37C0050CFEA /* ZSSsuperscript@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSsuperscript@2x.png"; sourceTree = "<group>"; };
+		D8D77ED81D09A37C0050CFEA /* ZSStextcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSStextcolor.png; sourceTree = "<group>"; };
+		D8D77ED91D09A37C0050CFEA /* ZSStextcolor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSStextcolor@2x.png"; sourceTree = "<group>"; };
+		D8D77EDA1D09A37C0050CFEA /* ZSSundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSSundo.png; sourceTree = "<group>"; };
+		D8D77EDB1D09A37C0050CFEA /* ZSSundo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ZSSundo@2x.png"; sourceTree = "<group>"; };
+		D8D77EDD1D09A37C0050CFEA /* CYRLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRLayoutManager.h; sourceTree = "<group>"; };
+		D8D77EDE1D09A37C0050CFEA /* CYRLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRLayoutManager.m; sourceTree = "<group>"; };
+		D8D77EDF1D09A37C0050CFEA /* CYRTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRTextStorage.h; sourceTree = "<group>"; };
+		D8D77EE01D09A37C0050CFEA /* CYRTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRTextStorage.m; sourceTree = "<group>"; };
+		D8D77EE11D09A37C0050CFEA /* CYRTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRTextView.h; sourceTree = "<group>"; };
+		D8D77EE21D09A37C0050CFEA /* CYRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRTextView.m; sourceTree = "<group>"; };
+		D8D77EE31D09A37C0050CFEA /* CYRToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRToken.h; sourceTree = "<group>"; };
+		D8D77EE41D09A37C0050CFEA /* CYRToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRToken.m; sourceTree = "<group>"; };
+		D8D77EE51D09A37C0050CFEA /* HRBrightnessCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBrightnessCursor.h; sourceTree = "<group>"; };
+		D8D77EE61D09A37C0050CFEA /* HRBrightnessCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBrightnessCursor.m; sourceTree = "<group>"; };
+		D8D77EE71D09A37C0050CFEA /* HRCgUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCgUtil.h; sourceTree = "<group>"; };
+		D8D77EE81D09A37C0050CFEA /* HRCgUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCgUtil.m; sourceTree = "<group>"; };
+		D8D77EE91D09A37C0050CFEA /* HRColorCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorCursor.h; sourceTree = "<group>"; };
+		D8D77EEA1D09A37C0050CFEA /* HRColorCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorCursor.m; sourceTree = "<group>"; };
+		D8D77EEB1D09A37C0050CFEA /* HRColorPickerMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorPickerMacros.h; sourceTree = "<group>"; };
+		D8D77EEC1D09A37C0050CFEA /* HRColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorPickerView.h; sourceTree = "<group>"; };
+		D8D77EED1D09A37C0050CFEA /* HRColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorPickerView.m; sourceTree = "<group>"; };
+		D8D77EEE1D09A37C0050CFEA /* HRColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorPickerViewController.h; sourceTree = "<group>"; };
+		D8D77EEF1D09A37C0050CFEA /* HRColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorPickerViewController.m; sourceTree = "<group>"; };
+		D8D77EF01D09A37C0050CFEA /* HRColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorUtil.h; sourceTree = "<group>"; };
+		D8D77EF11D09A37C0050CFEA /* HRColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorUtil.m; sourceTree = "<group>"; };
+		D8D77EF21D09A37C0050CFEA /* UIWebView+GUIFixes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+GUIFixes.h"; sourceTree = "<group>"; };
+		D8D77EF31D09A37C0050CFEA /* UIWebView+GUIFixes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GUIFixes.m"; sourceTree = "<group>"; };
+		D8D77EF41D09A37C0050CFEA /* WordPress-iOS-Editor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WordPress-iOS-Editor-Prefix.pch"; sourceTree = "<group>"; };
+		D8D77EF51D09A37C0050CFEA /* WPEditorField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPEditorField.h; sourceTree = "<group>"; };
+		D8D77EF61D09A37C0050CFEA /* WPEditorField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPEditorField.m; sourceTree = "<group>"; };
+		D8D77EF71D09A37C0050CFEA /* WPEditorFormatbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPEditorFormatbarView.h; sourceTree = "<group>"; };
+		D8D77EF81D09A37C0050CFEA /* WPEditorFormatbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPEditorFormatbarView.m; sourceTree = "<group>"; };
+		D8D77EF91D09A37C0050CFEA /* WPEditorLoggingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPEditorLoggingConfiguration.h; sourceTree = "<group>"; };
+		D8D77EFA1D09A37C0050CFEA /* WPEditorLoggingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPEditorLoggingConfiguration.m; sourceTree = "<group>"; };
+		D8D77EFB1D09A37C0050CFEA /* WPEditorToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPEditorToolbarButton.h; sourceTree = "<group>"; };
+		D8D77EFC1D09A37C0050CFEA /* WPEditorToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPEditorToolbarButton.m; sourceTree = "<group>"; };
+		D8D77EFD1D09A37C0050CFEA /* WPEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPEditorView.h; sourceTree = "<group>"; };
+		D8D77EFE1D09A37C0050CFEA /* WPEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPEditorView.m; sourceTree = "<group>"; };
+		D8D77EFF1D09A37C0050CFEA /* WPEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPEditorViewController.h; sourceTree = "<group>"; };
+		D8D77F001D09A37C0050CFEA /* WPEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPEditorViewController.m; sourceTree = "<group>"; };
+		D8D77F011D09A37C0050CFEA /* WPImageMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageMeta.h; sourceTree = "<group>"; };
+		D8D77F021D09A37C0050CFEA /* WPImageMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageMeta.m; sourceTree = "<group>"; };
+		D8D77F031D09A37C0050CFEA /* WPLegacyEditorFormatAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLegacyEditorFormatAction.h; sourceTree = "<group>"; };
+		D8D77F041D09A37C0050CFEA /* WPLegacyEditorFormatAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPLegacyEditorFormatAction.m; sourceTree = "<group>"; };
+		D8D77F051D09A37C0050CFEA /* WPLegacyEditorFormatToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLegacyEditorFormatToolbar.h; sourceTree = "<group>"; };
+		D8D77F061D09A37C0050CFEA /* WPLegacyEditorFormatToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPLegacyEditorFormatToolbar.m; sourceTree = "<group>"; };
+		D8D77F071D09A37C0050CFEA /* WPLegacyEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLegacyEditorViewController.h; sourceTree = "<group>"; };
+		D8D77F081D09A37C0050CFEA /* WPLegacyEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPLegacyEditorViewController.m; sourceTree = "<group>"; };
+		D8D77F091D09A37C0050CFEA /* ZSSBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSSBarButtonItem.h; sourceTree = "<group>"; };
+		D8D77F0A1D09A37C0050CFEA /* ZSSBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSSBarButtonItem.m; sourceTree = "<group>"; };
+		D8D77F0B1D09A37C0050CFEA /* ZSSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSSTextView.h; sourceTree = "<group>"; };
+		D8D77F0C1D09A37C0050CFEA /* ZSSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSSTextView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D77E6E1D09A2430050CFEA /* libReactNativeControllers.a in Frameworks */,
+				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
+				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
+				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302B61ABCB90400DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302BC1ABCB91800DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302C01ABCB91800DB3ED1 /* libRCTImage.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302D41ABCB9D200DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302E01ABCB9EE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00E356EF1AD99517003FC87E /* exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* exampleTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = exampleTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		139105B71AF99BAD00B5F7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139105C11AF99BAD00B5F7CC /* libRCTSettings.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		139FDEE71B06529A00C62182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* example */ = {
+			isa = PBXGroup;
+			children = (
+				D8D77E6F1D09A37C0050CFEA /* Assets */,
+				D8D77EDC1D09A37C0050CFEA /* Classes */,
+				D8D77E5B1D09A1C10050CFEA /* RNWordPressEditorViewController.h */,
+				D8D77E5C1D09A1C10050CFEA /* RNWordPressEditorViewController.m */,
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = example;
+			sourceTree = "<group>";
+		};
+		146834001AC3E56700842450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146834041AC3E56700842450 /* libReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C398B11ACF4ADC00677621 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C398B91ACF4ADC00677621 /* libRCTLinking.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				D8D77E681D09A23C0050CFEA /* ReactNativeControllers.xcodeproj */,
+				146833FF1AC3E56700842450 /* React.xcodeproj */,
+				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
+				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
+				00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */,
+				78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */,
+				00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */,
+				139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */,
+				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
+				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
+				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		832341B11AAA6A8300B99B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832341B51AAA6A8300B99B32 /* libRCTText.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* example */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* exampleTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* example.app */,
+				00E356EE1AD99517003FC87E /* exampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8D77E691D09A23C0050CFEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8D77E6D1D09A23C0050CFEA /* libReactNativeControllers.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8D77E6F1D09A37C0050CFEA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D8D77E701D09A37C0050CFEA /* editor.css */,
+				D8D77E711D09A37C0050CFEA /* editor.html */,
+				D8D77E721D09A37C0050CFEA /* icon-posts-editor-inspector.png */,
+				D8D77E731D09A37C0050CFEA /* icon-posts-editor-inspector@2x.png */,
+				D8D77E741D09A37C0050CFEA /* icon-posts-editor-inspector@3x.png */,
+				D8D77E751D09A37C0050CFEA /* icon-posts-editor-preview.png */,
+				D8D77E761D09A37C0050CFEA /* icon-posts-editor-preview@2x.png */,
+				D8D77E771D09A37C0050CFEA /* icon-posts-editor-preview@3x.png */,
+				D8D77E781D09A37C0050CFEA /* icon_format_bold.png */,
+				D8D77E791D09A37C0050CFEA /* icon_format_bold@2x.png */,
+				D8D77E7A1D09A37C0050CFEA /* icon_format_bold@3x.png */,
+				D8D77E7B1D09A37C0050CFEA /* icon_format_html.png */,
+				D8D77E7C1D09A37C0050CFEA /* icon_format_html@2x.png */,
+				D8D77E7D1D09A37C0050CFEA /* icon_format_html@3x.png */,
+				D8D77E7E1D09A37C0050CFEA /* icon_format_italic.png */,
+				D8D77E7F1D09A37C0050CFEA /* icon_format_italic@2x.png */,
+				D8D77E801D09A37C0050CFEA /* icon_format_italic@3x.png */,
+				D8D77E811D09A37C0050CFEA /* icon_format_keyboard.png */,
+				D8D77E821D09A37C0050CFEA /* icon_format_keyboard@2x.png */,
+				D8D77E831D09A37C0050CFEA /* icon_format_link.png */,
+				D8D77E841D09A37C0050CFEA /* icon_format_link@2x.png */,
+				D8D77E851D09A37C0050CFEA /* icon_format_link@3x.png */,
+				D8D77E861D09A37C0050CFEA /* icon_format_media.png */,
+				D8D77E871D09A37C0050CFEA /* icon_format_media@2x.png */,
+				D8D77E881D09A37C0050CFEA /* icon_format_media@3x.png */,
+				D8D77E891D09A37C0050CFEA /* icon_format_more.png */,
+				D8D77E8A1D09A37C0050CFEA /* icon_format_more@2x.png */,
+				D8D77E8B1D09A37C0050CFEA /* icon_format_more@3x.png */,
+				D8D77E8C1D09A37C0050CFEA /* icon_format_ol.png */,
+				D8D77E8D1D09A37C0050CFEA /* icon_format_ol@2x.png */,
+				D8D77E8E1D09A37C0050CFEA /* icon_format_ol@3x.png */,
+				D8D77E8F1D09A37C0050CFEA /* icon_format_quote.png */,
+				D8D77E901D09A37C0050CFEA /* icon_format_quote@2x.png */,
+				D8D77E911D09A37C0050CFEA /* icon_format_quote@3x.png */,
+				D8D77E921D09A37C0050CFEA /* icon_format_strikethrough.png */,
+				D8D77E931D09A37C0050CFEA /* icon_format_strikethrough@2x.png */,
+				D8D77E941D09A37C0050CFEA /* icon_format_strikethrough@3x.png */,
+				D8D77E951D09A37C0050CFEA /* icon_format_ul.png */,
+				D8D77E961D09A37C0050CFEA /* icon_format_ul@2x.png */,
+				D8D77E971D09A37C0050CFEA /* icon_format_ul@3x.png */,
+				D8D77E981D09A37C0050CFEA /* icon_format_underline.png */,
+				D8D77E991D09A37C0050CFEA /* icon_format_underline@2x.png */,
+				D8D77E9A1D09A37C0050CFEA /* icon_format_unlink.png */,
+				D8D77E9B1D09A37C0050CFEA /* icon_format_unlink@2x.png */,
+				D8D77E9C1D09A37C0050CFEA /* icon_options.png */,
+				D8D77E9D1D09A37C0050CFEA /* icon_options@2x.png */,
+				D8D77E9E1D09A37C0050CFEA /* icon_preview.png */,
+				D8D77E9F1D09A37C0050CFEA /* icon_preview@2x.png */,
+				D8D77EA01D09A37C0050CFEA /* jquery.js */,
+				D8D77EA11D09A37C0050CFEA /* jquery.mobile-events.min.js */,
+				D8D77EA21D09A37C0050CFEA /* js-beautifier.js */,
+				D8D77EA31D09A37C0050CFEA /* rangy-classapplier.js */,
+				D8D77EA41D09A37C0050CFEA /* rangy-core.js */,
+				D8D77EA51D09A37C0050CFEA /* rangy-highlighter.js */,
+				D8D77EA61D09A37C0050CFEA /* rangy-selectionsaverestore.js */,
+				D8D77EA71D09A37C0050CFEA /* rangy-serializer.js */,
+				D8D77EA81D09A37C0050CFEA /* rangy-textrange.js */,
+				D8D77EA91D09A37C0050CFEA /* shortcode.js */,
+				D8D77EAA1D09A37C0050CFEA /* underscore-min.js */,
+				D8D77EAB1D09A37C0050CFEA /* WPEditorFormatbarView.xib */,
+				D8D77EAC1D09A37C0050CFEA /* WPHybridCallbacker.js */,
+				D8D77EAD1D09A37C0050CFEA /* WPHybridLogger.js */,
+				D8D77EAE1D09A37C0050CFEA /* wpload.js */,
+				D8D77EAF1D09A37C0050CFEA /* wpposter.svg */,
+				D8D77EB01D09A37C0050CFEA /* wpsave.js */,
+				D8D77EB11D09A37C0050CFEA /* ZSSbgcolor.png */,
+				D8D77EB21D09A37C0050CFEA /* ZSSbgcolor@2x.png */,
+				D8D77EB31D09A37C0050CFEA /* ZSScenterjustify.png */,
+				D8D77EB41D09A37C0050CFEA /* ZSScenterjustify@2x.png */,
+				D8D77EB51D09A37C0050CFEA /* ZSSclearstyle.png */,
+				D8D77EB61D09A37C0050CFEA /* ZSSclearstyle@2x.png */,
+				D8D77EB71D09A37C0050CFEA /* ZSSforcejustify.png */,
+				D8D77EB81D09A37C0050CFEA /* ZSSforcejustify@2x.png */,
+				D8D77EB91D09A37C0050CFEA /* ZSSh1.png */,
+				D8D77EBA1D09A37C0050CFEA /* ZSSh1@2x.png */,
+				D8D77EBB1D09A37C0050CFEA /* ZSSh2.png */,
+				D8D77EBC1D09A37C0050CFEA /* ZSSh2@2x.png */,
+				D8D77EBD1D09A37C0050CFEA /* ZSSh3.png */,
+				D8D77EBE1D09A37C0050CFEA /* ZSSh3@2x.png */,
+				D8D77EBF1D09A37C0050CFEA /* ZSSh4.png */,
+				D8D77EC01D09A37C0050CFEA /* ZSSh4@2x.png */,
+				D8D77EC11D09A37C0050CFEA /* ZSSh5.png */,
+				D8D77EC21D09A37C0050CFEA /* ZSSh5@2x.png */,
+				D8D77EC31D09A37C0050CFEA /* ZSSh6.png */,
+				D8D77EC41D09A37C0050CFEA /* ZSSh6@2x.png */,
+				D8D77EC51D09A37C0050CFEA /* ZSShorizontalrule.png */,
+				D8D77EC61D09A37C0050CFEA /* ZSShorizontalrule@2x.png */,
+				D8D77EC71D09A37C0050CFEA /* ZSSindent.png */,
+				D8D77EC81D09A37C0050CFEA /* ZSSindent@2x.png */,
+				D8D77EC91D09A37C0050CFEA /* ZSSleftjustify.png */,
+				D8D77ECA1D09A37C0050CFEA /* ZSSleftjustify@2x.png */,
+				D8D77ECB1D09A37C0050CFEA /* ZSSoutdent.png */,
+				D8D77ECC1D09A37C0050CFEA /* ZSSoutdent@2x.png */,
+				D8D77ECD1D09A37C0050CFEA /* ZSSquicklink.png */,
+				D8D77ECE1D09A37C0050CFEA /* ZSSquicklink@2x.png */,
+				D8D77ECF1D09A37C0050CFEA /* ZSSredo.png */,
+				D8D77ED01D09A37C0050CFEA /* ZSSredo@2x.png */,
+				D8D77ED11D09A37C0050CFEA /* ZSSRichTextEditor.js */,
+				D8D77ED21D09A37C0050CFEA /* ZSSrightjustify.png */,
+				D8D77ED31D09A37C0050CFEA /* ZSSrightjustify@2x.png */,
+				D8D77ED41D09A37C0050CFEA /* ZSSsubscript.png */,
+				D8D77ED51D09A37C0050CFEA /* ZSSsubscript@2x.png */,
+				D8D77ED61D09A37C0050CFEA /* ZSSsuperscript.png */,
+				D8D77ED71D09A37C0050CFEA /* ZSSsuperscript@2x.png */,
+				D8D77ED81D09A37C0050CFEA /* ZSStextcolor.png */,
+				D8D77ED91D09A37C0050CFEA /* ZSStextcolor@2x.png */,
+				D8D77EDA1D09A37C0050CFEA /* ZSSundo.png */,
+				D8D77EDB1D09A37C0050CFEA /* ZSSundo@2x.png */,
+			);
+			name = Assets;
+			path = "../node_modules/react-native-wordpress-editor/ios/WordPress-Editor-iOS/Assets";
+			sourceTree = "<group>";
+		};
+		D8D77EDC1D09A37C0050CFEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D8D77EDD1D09A37C0050CFEA /* CYRLayoutManager.h */,
+				D8D77EDE1D09A37C0050CFEA /* CYRLayoutManager.m */,
+				D8D77EDF1D09A37C0050CFEA /* CYRTextStorage.h */,
+				D8D77EE01D09A37C0050CFEA /* CYRTextStorage.m */,
+				D8D77EE11D09A37C0050CFEA /* CYRTextView.h */,
+				D8D77EE21D09A37C0050CFEA /* CYRTextView.m */,
+				D8D77EE31D09A37C0050CFEA /* CYRToken.h */,
+				D8D77EE41D09A37C0050CFEA /* CYRToken.m */,
+				D8D77EE51D09A37C0050CFEA /* HRBrightnessCursor.h */,
+				D8D77EE61D09A37C0050CFEA /* HRBrightnessCursor.m */,
+				D8D77EE71D09A37C0050CFEA /* HRCgUtil.h */,
+				D8D77EE81D09A37C0050CFEA /* HRCgUtil.m */,
+				D8D77EE91D09A37C0050CFEA /* HRColorCursor.h */,
+				D8D77EEA1D09A37C0050CFEA /* HRColorCursor.m */,
+				D8D77EEB1D09A37C0050CFEA /* HRColorPickerMacros.h */,
+				D8D77EEC1D09A37C0050CFEA /* HRColorPickerView.h */,
+				D8D77EED1D09A37C0050CFEA /* HRColorPickerView.m */,
+				D8D77EEE1D09A37C0050CFEA /* HRColorPickerViewController.h */,
+				D8D77EEF1D09A37C0050CFEA /* HRColorPickerViewController.m */,
+				D8D77EF01D09A37C0050CFEA /* HRColorUtil.h */,
+				D8D77EF11D09A37C0050CFEA /* HRColorUtil.m */,
+				D8D77EF21D09A37C0050CFEA /* UIWebView+GUIFixes.h */,
+				D8D77EF31D09A37C0050CFEA /* UIWebView+GUIFixes.m */,
+				D8D77EF41D09A37C0050CFEA /* WordPress-iOS-Editor-Prefix.pch */,
+				D8D77EF51D09A37C0050CFEA /* WPEditorField.h */,
+				D8D77EF61D09A37C0050CFEA /* WPEditorField.m */,
+				D8D77EF71D09A37C0050CFEA /* WPEditorFormatbarView.h */,
+				D8D77EF81D09A37C0050CFEA /* WPEditorFormatbarView.m */,
+				D8D77EF91D09A37C0050CFEA /* WPEditorLoggingConfiguration.h */,
+				D8D77EFA1D09A37C0050CFEA /* WPEditorLoggingConfiguration.m */,
+				D8D77EFB1D09A37C0050CFEA /* WPEditorToolbarButton.h */,
+				D8D77EFC1D09A37C0050CFEA /* WPEditorToolbarButton.m */,
+				D8D77EFD1D09A37C0050CFEA /* WPEditorView.h */,
+				D8D77EFE1D09A37C0050CFEA /* WPEditorView.m */,
+				D8D77EFF1D09A37C0050CFEA /* WPEditorViewController.h */,
+				D8D77F001D09A37C0050CFEA /* WPEditorViewController.m */,
+				D8D77F011D09A37C0050CFEA /* WPImageMeta.h */,
+				D8D77F021D09A37C0050CFEA /* WPImageMeta.m */,
+				D8D77F031D09A37C0050CFEA /* WPLegacyEditorFormatAction.h */,
+				D8D77F041D09A37C0050CFEA /* WPLegacyEditorFormatAction.m */,
+				D8D77F051D09A37C0050CFEA /* WPLegacyEditorFormatToolbar.h */,
+				D8D77F061D09A37C0050CFEA /* WPLegacyEditorFormatToolbar.m */,
+				D8D77F071D09A37C0050CFEA /* WPLegacyEditorViewController.h */,
+				D8D77F081D09A37C0050CFEA /* WPLegacyEditorViewController.m */,
+				D8D77F091D09A37C0050CFEA /* ZSSBarButtonItem.h */,
+				D8D77F0A1D09A37C0050CFEA /* ZSSBarButtonItem.m */,
+				D8D77F0B1D09A37C0050CFEA /* ZSSTextView.h */,
+				D8D77F0C1D09A37C0050CFEA /* ZSSTextView.m */,
+			);
+			name = Classes;
+			path = "../node_modules/react-native-wordpress-editor/ios/WordPress-Editor-iOS/Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* exampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "exampleTests" */;
+			buildPhases = (
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = exampleTests;
+			productName = exampleTests;
+			productReference = 00E356EE1AD99517003FC87E /* exampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "example" */;
+			buildPhases = (
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = example;
+			productName = "Hello World";
+			productReference = 13B07F961A680F5B00A75B9A /* example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
+					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
+					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302BC1ABCB91800DB3ED1 /* Products */;
+					ProjectRef = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
+					ProjectRef = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
+					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
+					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+				},
+				{
+					ProductGroup = 832341B11AAA6A8300B99B32 /* Products */;
+					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
+					ProjectRef = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+				},
+				{
+					ProductGroup = 139FDEE71B06529A00C62182 /* Products */;
+					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+				},
+				{
+					ProductGroup = 146834001AC3E56700842450 /* Products */;
+					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = D8D77E691D09A23C0050CFEA /* Products */;
+					ProjectRef = D8D77E681D09A23C0050CFEA /* ReactNativeControllers.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* example */,
+				00E356ED1AD99517003FC87E /* exampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTActionSheet.a;
+			remoteRef = 00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTGeolocation.a;
+			remoteRef = 00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302C01ABCB91800DB3ED1 /* libRCTImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTImage.a;
+			remoteRef = 00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTNetwork.a;
+			remoteRef = 00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTVibration.a;
+			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTSettings.a;
+			remoteRef = 139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139FDEF41B06529B00C62182 /* libRCTWebSocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTWebSocket.a;
+			remoteRef = 139FDEF31B06529B00C62182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		146834041AC3E56700842450 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTLinking.a;
+			remoteRef = 78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTText.a;
+			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8D77E6D1D09A23C0050CFEA /* libReactNativeControllers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeControllers.a;
+			remoteRef = D8D77E6C1D09A23C0050CFEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D77F681D09A37C0050CFEA /* ZSSoutdent.png in Resources */,
+				D8D77F3D1D09A37C0050CFEA /* jquery.js in Resources */,
+				D8D77F741D09A37C0050CFEA /* ZSSsuperscript@2x.png in Resources */,
+				D8D77F651D09A37C0050CFEA /* ZSSindent@2x.png in Resources */,
+				D8D77F551D09A37C0050CFEA /* ZSSforcejustify@2x.png in Resources */,
+				D8D77F751D09A37C0050CFEA /* ZSStextcolor.png in Resources */,
+				D8D77F621D09A37C0050CFEA /* ZSShorizontalrule.png in Resources */,
+				D8D77F731D09A37C0050CFEA /* ZSSsuperscript.png in Resources */,
+				D8D77F301D09A37C0050CFEA /* icon_format_strikethrough@2x.png in Resources */,
+				D8D77F431D09A37C0050CFEA /* rangy-selectionsaverestore.js in Resources */,
+				D8D77F211D09A37C0050CFEA /* icon_format_link@2x.png in Resources */,
+				D8D77F1C1D09A37C0050CFEA /* icon_format_italic@2x.png in Resources */,
+				D8D77F6F1D09A37C0050CFEA /* ZSSrightjustify.png in Resources */,
+				D8D77F4A1D09A37C0050CFEA /* WPHybridLogger.js in Resources */,
+				D8D77F4D1D09A37C0050CFEA /* wpsave.js in Resources */,
+				D8D77F661D09A37C0050CFEA /* ZSSleftjustify.png in Resources */,
+				D8D77F421D09A37C0050CFEA /* rangy-highlighter.js in Resources */,
+				D8D77F5B1D09A37C0050CFEA /* ZSSh3@2x.png in Resources */,
+				D8D77F441D09A37C0050CFEA /* rangy-serializer.js in Resources */,
+				D8D77F691D09A37C0050CFEA /* ZSSoutdent@2x.png in Resources */,
+				D8D77F4E1D09A37C0050CFEA /* ZSSbgcolor.png in Resources */,
+				D8D77F4B1D09A37C0050CFEA /* wpload.js in Resources */,
+				D8D77F101D09A37C0050CFEA /* icon-posts-editor-inspector@2x.png in Resources */,
+				D8D77F3A1D09A37C0050CFEA /* icon_options@2x.png in Resources */,
+				D8D77F1B1D09A37C0050CFEA /* icon_format_italic.png in Resources */,
+				D8D77F3B1D09A37C0050CFEA /* icon_preview.png in Resources */,
+				D8D77F631D09A37C0050CFEA /* ZSShorizontalrule@2x.png in Resources */,
+				D8D77F541D09A37C0050CFEA /* ZSSforcejustify.png in Resources */,
+				D8D77F1F1D09A37C0050CFEA /* icon_format_keyboard@2x.png in Resources */,
+				D8D77F6D1D09A37C0050CFEA /* ZSSredo@2x.png in Resources */,
+				D8D77F161D09A37C0050CFEA /* icon_format_bold@2x.png in Resources */,
+				D8D77F531D09A37C0050CFEA /* ZSSclearstyle@2x.png in Resources */,
+				D8D77F5E1D09A37C0050CFEA /* ZSSh5.png in Resources */,
+				D8D77F6C1D09A37C0050CFEA /* ZSSredo.png in Resources */,
+				D8D77F491D09A37C0050CFEA /* WPHybridCallbacker.js in Resources */,
+				D8D77F311D09A37C0050CFEA /* icon_format_strikethrough@3x.png in Resources */,
+				D8D77F1D1D09A37C0050CFEA /* icon_format_italic@3x.png in Resources */,
+				D8D77F5A1D09A37C0050CFEA /* ZSSh3.png in Resources */,
+				D8D77F501D09A37C0050CFEA /* ZSScenterjustify.png in Resources */,
+				D8D77F151D09A37C0050CFEA /* icon_format_bold.png in Resources */,
+				D8D77F271D09A37C0050CFEA /* icon_format_more@2x.png in Resources */,
+				D8D77F781D09A37C0050CFEA /* ZSSundo@2x.png in Resources */,
+				D8D77F361D09A37C0050CFEA /* icon_format_underline@2x.png in Resources */,
+				D8D77F471D09A37C0050CFEA /* underscore-min.js in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D8D77F601D09A37C0050CFEA /* ZSSh6.png in Resources */,
+				D8D77F341D09A37C0050CFEA /* icon_format_ul@3x.png in Resources */,
+				D8D77F181D09A37C0050CFEA /* icon_format_html.png in Resources */,
+				D8D77F6B1D09A37C0050CFEA /* ZSSquicklink@2x.png in Resources */,
+				D8D77F121D09A37C0050CFEA /* icon-posts-editor-preview.png in Resources */,
+				D8D77F671D09A37C0050CFEA /* ZSSleftjustify@2x.png in Resources */,
+				D8D77F641D09A37C0050CFEA /* ZSSindent.png in Resources */,
+				D8D77F451D09A37C0050CFEA /* rangy-textrange.js in Resources */,
+				D8D77F371D09A37C0050CFEA /* icon_format_unlink.png in Resources */,
+				D8D77F6A1D09A37C0050CFEA /* ZSSquicklink.png in Resources */,
+				D8D77F3E1D09A37C0050CFEA /* jquery.mobile-events.min.js in Resources */,
+				D8D77F321D09A37C0050CFEA /* icon_format_ul.png in Resources */,
+				D8D77F281D09A37C0050CFEA /* icon_format_more@3x.png in Resources */,
+				D8D77F391D09A37C0050CFEA /* icon_options.png in Resources */,
+				D8D77F351D09A37C0050CFEA /* icon_format_underline.png in Resources */,
+				D8D77F5D1D09A37C0050CFEA /* ZSSh4@2x.png in Resources */,
+				D8D77F221D09A37C0050CFEA /* icon_format_link@3x.png in Resources */,
+				D8D77F331D09A37C0050CFEA /* icon_format_ul@2x.png in Resources */,
+				D8D77F2F1D09A37C0050CFEA /* icon_format_strikethrough.png in Resources */,
+				D8D77F581D09A37C0050CFEA /* ZSSh2.png in Resources */,
+				D8D77F0E1D09A37C0050CFEA /* editor.html in Resources */,
+				D8D77F6E1D09A37C0050CFEA /* ZSSRichTextEditor.js in Resources */,
+				D8D77F2B1D09A37C0050CFEA /* icon_format_ol@3x.png in Resources */,
+				D8D77F201D09A37C0050CFEA /* icon_format_link.png in Resources */,
+				D8D77F261D09A37C0050CFEA /* icon_format_more.png in Resources */,
+				D8D77F4C1D09A37C0050CFEA /* wpposter.svg in Resources */,
+				D8D77F191D09A37C0050CFEA /* icon_format_html@2x.png in Resources */,
+				D8D77F3F1D09A37C0050CFEA /* js-beautifier.js in Resources */,
+				D8D77F771D09A37C0050CFEA /* ZSSundo.png in Resources */,
+				D8D77F111D09A37C0050CFEA /* icon-posts-editor-inspector@3x.png in Resources */,
+				D8D77F381D09A37C0050CFEA /* icon_format_unlink@2x.png in Resources */,
+				D8D77F721D09A37C0050CFEA /* ZSSsubscript@2x.png in Resources */,
+				D8D77F2E1D09A37C0050CFEA /* icon_format_quote@3x.png in Resources */,
+				D8D77F761D09A37C0050CFEA /* ZSStextcolor@2x.png in Resources */,
+				D8D77F571D09A37C0050CFEA /* ZSSh1@2x.png in Resources */,
+				D8D77F401D09A37C0050CFEA /* rangy-classapplier.js in Resources */,
+				D8D77F481D09A37C0050CFEA /* WPEditorFormatbarView.xib in Resources */,
+				D8D77F511D09A37C0050CFEA /* ZSScenterjustify@2x.png in Resources */,
+				D8D77F521D09A37C0050CFEA /* ZSSclearstyle.png in Resources */,
+				D8D77F2D1D09A37C0050CFEA /* icon_format_quote@2x.png in Resources */,
+				D8D77F591D09A37C0050CFEA /* ZSSh2@2x.png in Resources */,
+				D8D77F0F1D09A37C0050CFEA /* icon-posts-editor-inspector.png in Resources */,
+				D8D77F1A1D09A37C0050CFEA /* icon_format_html@3x.png in Resources */,
+				D8D77F231D09A37C0050CFEA /* icon_format_media.png in Resources */,
+				D8D77F141D09A37C0050CFEA /* icon-posts-editor-preview@3x.png in Resources */,
+				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				D8D77F5F1D09A37C0050CFEA /* ZSSh5@2x.png in Resources */,
+				D8D77F3C1D09A37C0050CFEA /* icon_preview@2x.png in Resources */,
+				D8D77F1E1D09A37C0050CFEA /* icon_format_keyboard.png in Resources */,
+				D8D77F461D09A37C0050CFEA /* shortcode.js in Resources */,
+				D8D77F171D09A37C0050CFEA /* icon_format_bold@3x.png in Resources */,
+				D8D77F711D09A37C0050CFEA /* ZSSsubscript.png in Resources */,
+				D8D77F0D1D09A37C0050CFEA /* editor.css in Resources */,
+				D8D77F2C1D09A37C0050CFEA /* icon_format_quote.png in Resources */,
+				D8D77F701D09A37C0050CFEA /* ZSSrightjustify@2x.png in Resources */,
+				D8D77F411D09A37C0050CFEA /* rangy-core.js in Resources */,
+				D8D77F561D09A37C0050CFEA /* ZSSh1.png in Resources */,
+				D8D77F131D09A37C0050CFEA /* icon-posts-editor-preview@2x.png in Resources */,
+				D8D77F291D09A37C0050CFEA /* icon_format_ol.png in Resources */,
+				D8D77F2A1D09A37C0050CFEA /* icon_format_ol@2x.png in Resources */,
+				D8D77F5C1D09A37C0050CFEA /* ZSSh4.png in Resources */,
+				D8D77F611D09A37C0050CFEA /* ZSSh6@2x.png in Resources */,
+				D8D77F241D09A37C0050CFEA /* icon_format_media@2x.png in Resources */,
+				D8D77F251D09A37C0050CFEA /* icon_format_media@3x.png in Resources */,
+				D8D77F4F1D09A37C0050CFEA /* ZSSbgcolor@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* exampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D77F881D09A37C0050CFEA /* WPEditorView.m in Sources */,
+				D8D77F7D1D09A37C0050CFEA /* HRBrightnessCursor.m in Sources */,
+				D8D77F7F1D09A37C0050CFEA /* HRColorCursor.m in Sources */,
+				D8D77F791D09A37C0050CFEA /* CYRLayoutManager.m in Sources */,
+				D8D77F831D09A37C0050CFEA /* UIWebView+GUIFixes.m in Sources */,
+				D8D77F7A1D09A37C0050CFEA /* CYRTextStorage.m in Sources */,
+				D8D77F7E1D09A37C0050CFEA /* HRCgUtil.m in Sources */,
+				D8D77F8E1D09A37C0050CFEA /* ZSSBarButtonItem.m in Sources */,
+				D8D77F7B1D09A37C0050CFEA /* CYRTextView.m in Sources */,
+				D8D77F891D09A37C0050CFEA /* WPEditorViewController.m in Sources */,
+				D8D77F8F1D09A37C0050CFEA /* ZSSTextView.m in Sources */,
+				D8D77F8B1D09A37C0050CFEA /* WPLegacyEditorFormatAction.m in Sources */,
+				D8D77F811D09A37C0050CFEA /* HRColorPickerViewController.m in Sources */,
+				D8D77F7C1D09A37C0050CFEA /* CYRToken.m in Sources */,
+				D8D77F851D09A37C0050CFEA /* WPEditorFormatbarView.m in Sources */,
+				D8D77F861D09A37C0050CFEA /* WPEditorLoggingConfiguration.m in Sources */,
+				D8D77F8A1D09A37C0050CFEA /* WPImageMeta.m in Sources */,
+				D8D77E5D1D09A1C10050CFEA /* RNWordPressEditorViewController.m in Sources */,
+				D8D77F841D09A37C0050CFEA /* WPEditorField.m in Sources */,
+				D8D77F8C1D09A37C0050CFEA /* WPLegacyEditorFormatToolbar.m in Sources */,
+				D8D77F871D09A37C0050CFEA /* WPEditorToolbarButton.m in Sources */,
+				D8D77F8D1D09A37C0050CFEA /* WPLegacyEditorViewController.m in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				D8D77F821D09A37C0050CFEA /* HRColorUtil.m in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				D8D77F801D09A37C0050CFEA /* HRColorPickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* example */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B07FB21A68108700A75B9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = example;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = exampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/example.app/example";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = exampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/example.app/example";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				INFOPLIST_FILE = example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = example;
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				INFOPLIST_FILE = example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = example;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "exampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
