@@ -155,6 +155,10 @@
 		D8D77F8D1D09A37C0050CFEA /* WPLegacyEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F081D09A37C0050CFEA /* WPLegacyEditorViewController.m */; };
 		D8D77F8E1D09A37C0050CFEA /* ZSSBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F0A1D09A37C0050CFEA /* ZSSBarButtonItem.m */; };
 		D8D77F8F1D09A37C0050CFEA /* ZSSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F0C1D09A37C0050CFEA /* ZSSTextView.m */; };
+		D8D77FA11D09A9620050CFEA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D8D77F9C1D09A9620050CFEA /* LICENSE */; };
+		D8D77FA21D09A9620050CFEA /* NSDictionary+SafeExpectations.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77F9E1D09A9620050CFEA /* NSDictionary+SafeExpectations.m */; };
+		D8D77FA31D09A9620050CFEA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D8D77FA01D09A9620050CFEA /* README.md */; };
+		D8D77FB41D09BAA00050CFEA /* RNWordPressEditorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D77FB31D09BAA00050CFEA /* RNWordPressEditorManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -425,6 +429,13 @@
 		D8D77F0A1D09A37C0050CFEA /* ZSSBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSSBarButtonItem.m; sourceTree = "<group>"; };
 		D8D77F0B1D09A37C0050CFEA /* ZSSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSSTextView.h; sourceTree = "<group>"; };
 		D8D77F0C1D09A37C0050CFEA /* ZSSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSSTextView.m; sourceTree = "<group>"; };
+		D8D77F9C1D09A9620050CFEA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D8D77F9D1D09A9620050CFEA /* NSDictionary+SafeExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeExpectations.h"; sourceTree = "<group>"; };
+		D8D77F9E1D09A9620050CFEA /* NSDictionary+SafeExpectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeExpectations.m"; sourceTree = "<group>"; };
+		D8D77F9F1D09A9620050CFEA /* NSObject+SafeExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeExpectations.h"; sourceTree = "<group>"; };
+		D8D77FA01D09A9620050CFEA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D8D77FB21D09BAA00050CFEA /* RNWordPressEditorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNWordPressEditorManager.h; path = "../node_modules/react-native-wordpress-editor/ios/RNWordPressEditorManager.h"; sourceTree = "<group>"; };
+		D8D77FB31D09BAA00050CFEA /* RNWordPressEditorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNWordPressEditorManager.m; path = "../node_modules/react-native-wordpress-editor/ios/RNWordPressEditorManager.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +547,8 @@
 				D8D77EDC1D09A37C0050CFEA /* Classes */,
 				D8D77E5B1D09A1C10050CFEA /* RNWordPressEditorViewController.h */,
 				D8D77E5C1D09A1C10050CFEA /* RNWordPressEditorViewController.m */,
+				D8D77FB21D09BAA00050CFEA /* RNWordPressEditorManager.h */,
+				D8D77FB31D09BAA00050CFEA /* RNWordPressEditorManager.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -737,6 +750,7 @@
 		D8D77EDC1D09A37C0050CFEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D8D77F9B1D09A9620050CFEA /* NSObject-SafeExpectations */,
 				D8D77EDD1D09A37C0050CFEA /* CYRLayoutManager.h */,
 				D8D77EDE1D09A37C0050CFEA /* CYRLayoutManager.m */,
 				D8D77EDF1D09A37C0050CFEA /* CYRTextStorage.h */,
@@ -788,6 +802,18 @@
 			);
 			name = Classes;
 			path = "../node_modules/react-native-wordpress-editor/ios/WordPress-Editor-iOS/Classes";
+			sourceTree = "<group>";
+		};
+		D8D77F9B1D09A9620050CFEA /* NSObject-SafeExpectations */ = {
+			isa = PBXGroup;
+			children = (
+				D8D77F9C1D09A9620050CFEA /* LICENSE */,
+				D8D77F9D1D09A9620050CFEA /* NSDictionary+SafeExpectations.h */,
+				D8D77F9E1D09A9620050CFEA /* NSDictionary+SafeExpectations.m */,
+				D8D77F9F1D09A9620050CFEA /* NSObject+SafeExpectations.h */,
+				D8D77FA01D09A9620050CFEA /* README.md */,
+			);
+			path = "NSObject-SafeExpectations";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1046,6 +1072,7 @@
 				D8D77F361D09A37C0050CFEA /* icon_format_underline@2x.png in Resources */,
 				D8D77F471D09A37C0050CFEA /* underscore-min.js in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D8D77FA11D09A9620050CFEA /* LICENSE in Resources */,
 				D8D77F601D09A37C0050CFEA /* ZSSh6.png in Resources */,
 				D8D77F341D09A37C0050CFEA /* icon_format_ul@3x.png in Resources */,
 				D8D77F181D09A37C0050CFEA /* icon_format_html.png in Resources */,
@@ -1147,6 +1174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D77F881D09A37C0050CFEA /* WPEditorView.m in Sources */,
+				D8D77FA21D09A9620050CFEA /* NSDictionary+SafeExpectations.m in Sources */,
 				D8D77F7D1D09A37C0050CFEA /* HRBrightnessCursor.m in Sources */,
 				D8D77F7F1D09A37C0050CFEA /* HRColorCursor.m in Sources */,
 				D8D77F791D09A37C0050CFEA /* CYRLayoutManager.m in Sources */,
@@ -1155,6 +1183,8 @@
 				D8D77F7E1D09A37C0050CFEA /* HRCgUtil.m in Sources */,
 				D8D77F8E1D09A37C0050CFEA /* ZSSBarButtonItem.m in Sources */,
 				D8D77F7B1D09A37C0050CFEA /* CYRTextView.m in Sources */,
+				D8D77FA31D09A9620050CFEA /* README.md in Sources */,
+				D8D77FB41D09BAA00050CFEA /* RNWordPressEditorManager.m in Sources */,
 				D8D77F891D09A37C0050CFEA /* WPEditorViewController.m in Sources */,
 				D8D77F8F1D09A37C0050CFEA /* ZSSTextView.m in Sources */,
 				D8D77F8B1D09A37C0050CFEA /* WPLegacyEditorFormatAction.m in Sources */,
@@ -1236,6 +1266,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-controllers/**",
 				);
 				INFOPLIST_FILE = example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1255,6 +1286,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-controllers/**",
 				);
 				INFOPLIST_FILE = example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
