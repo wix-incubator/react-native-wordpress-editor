@@ -8,10 +8,11 @@
 #import "RNWordPressEditorViewController.h"
 #import "WPEditorView.h"
 #import "RCTBridge.h"
-#import "RCTEventDispatcher.h"
 #import "RCTRootView.h"
 #import "RCCManager.h"
 #import "RCTHelpers.h"
+
+NSString* const EditorDidPressMediaNotification = @"EditorDidPressMedia";
 
 @interface UILabelWithPadding : UILabel
 @property (nonatomic) CGFloat leftRightPadding;
@@ -27,7 +28,6 @@
 
 static RNWordPressEditorViewController *gActiveBlogEditorViewController = nil;
 
-NSString *const EditorDidPressMediaNotification = @"EditorDidPressMedia";
 NSString *const DefaultDesktopEditOnlyText = @"Sorry! You can\'t edit this post from your mobile device as it may mess up your desktop design";
 CGFloat   const DefaultDesktopEditOnlyTextFontSize = 13;
 CGFloat   const DefaultDesktopEditOnlyPadding = 10;
@@ -43,7 +43,6 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
 @property (nonatomic) BOOL startEditingOnFirstAppear;
 @property (nonatomic) BOOL isFirstAppear;
 @property (nonatomic) BOOL isFirstLayout;
-@property (nonatomic, strong) NSArray *pendingImagesToAdd;
 @property (nonatomic, strong) RCTRootView *bottomToolbarRCTView;
 @property (nonatomic, strong) UILabelWithPadding *desktopEditOnlyLabel;
 @end
@@ -70,6 +69,11 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRNReload) name:RCTReloadNotification object:nil];
   }
   return self;
+}
+
++(RNWordPressEditorViewController*)getActiveInstance
+{
+  return gActiveBlogEditorViewController;
 }
 
 -(void)cleanup
@@ -439,143 +443,6 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   }
   
   return coverImageData;
-}
-
-@end
-
-@interface BlogEditorManager()
-@property (nonatomic, weak) RNWordPressEditorViewController *activeBlogEditorForPhotos;
-@end
-
-@implementation BlogEditorManager
-
-RCT_EXPORT_MODULE(BlogEditorManager);
-
-@synthesize bridge = _bridge;
-
--(instancetype)init
-{
-  self = [super init];
-  if (self)
-  {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEditorDidPressMedia:) name:EditorDidPressMediaNotification object:nil];
-  }
-  return self;
-}
-
--(void)dealloc
-{
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (dispatch_queue_t)methodQueue
-{
-  return dispatch_get_main_queue();
-}
-
-+(NSError*)createErrorWithCode:(NSInteger)code description:(NSString*)description
-{
-  NSString *safeDescription = (description == nil) ? @"" : description;
-  return [NSError errorWithDomain:@"BlogEditorManager" code:code userInfo:@{NSLocalizedDescriptionKey: safeDescription}];
-}
-
-+(void)performReject:(RCTPromiseRejectBlock)reject code:(NSInteger)code description:(NSString*)description
-{
-  NSError *error = [BlogEditorManager createErrorWithCode:code description:description];
-  reject([NSString stringWithFormat: @"%lu", (long)error.code], error.localizedDescription, error);
-}
-
--(void)onEditorDidPressMedia:(NSNotification*)notification
-{
-  self.activeBlogEditorForPhotos = gActiveBlogEditorViewController;
-  [self.bridge.eventDispatcher sendAppEventWithName:@"EventEditorDidPressMedia" body:@{}];
-}
-
-
-RCT_EXPORT_METHOD(setEditingState:(BOOL)editing)
-{
-  if (gActiveBlogEditorViewController == nil)
-  {
-    return;
-  }
-  
-  if (!editing && gActiveBlogEditorViewController.isEditing)
-  {
-    [gActiveBlogEditorViewController stopEditing];
-  }
-  else if (editing && !gActiveBlogEditorViewController.isEditing)
-  {
-    [gActiveBlogEditorViewController startEditing];
-  }
-}
-
-RCT_EXPORT_METHOD(resetStateToInitial)
-{
-  if (gActiveBlogEditorViewController == nil)
-  {
-    return;
-  }
-  
-  [gActiveBlogEditorViewController setInitialTitleAndBody];
-}
-
-RCT_EXPORT_METHOD(isPostChanged:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
-{
-  if (gActiveBlogEditorViewController == nil)
-  {
-    [BlogEditorManager performReject:reject code:1000 description:@"No Active Blog Editor"];
-    return;
-  }
-  
-  resolve(@([gActiveBlogEditorViewController initialPostChanged]));
-}
-
-RCT_EXPORT_METHOD(getPostData:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
-{
-  if (gActiveBlogEditorViewController == nil)
-  {
-    [BlogEditorManager performReject:reject code:1000 description:@"No Active Blog Editor"];
-    return;
-  }
-  
-  NSString *titleText = gActiveBlogEditorViewController.titleText;
-  NSString *mediaText = gActiveBlogEditorViewController.bodyText;
-  
-  NSMutableDictionary *result = [@{@"titleText": titleText != nil ? titleText : @"",
-                                   @"mediaText": mediaText != nil ? mediaText : @""} mutableCopy];
-  
-  
-  NSDictionary *coverImageData = [gActiveBlogEditorViewController coverImageData];
-  if (coverImageData != nil)
-  {
-    result[@"coverImage"] = coverImageData;
-  }
-  
-  resolve(result);
-}
-
-RCT_EXPORT_METHOD(addImages:(NSArray*)imageURLs)
-{
-  /*
-   IMPORTANT:
-   If this method gets called when the modal image uploader is still showing, for some reason, the WixBlogEditorViewController will not be able to actually add and present the images (the UIWebView probably can't execute the JS)
-   For now we'll mark the images as pending so we can add them as soon as the view appears again
-   
-  */
-  
-  //if the static reference exists the view is shown - add the images now
-  if (gActiveBlogEditorViewController != nil)
-  {
-    [gActiveBlogEditorViewController addImages:imageURLs];
-    return;
-  }
-  
-  if (self.activeBlogEditorForPhotos == nil)
-  {
-    return;
-  }
-  
-  self.activeBlogEditorForPhotos.pendingImagesToAdd = imageURLs;
 }
 
 @end

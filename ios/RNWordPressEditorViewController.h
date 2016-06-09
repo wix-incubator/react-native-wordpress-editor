@@ -6,12 +6,28 @@
 //  Copyright © 2016 artal. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "WPEditorViewController.h"
-#import "RCTBridgeModule.h"
 #import "RCCExternalViewControllerProtocol.h"
 
-@interface RNWordPressEditorViewController : WPEditorViewController <WPEditorViewControllerDelegate, RCCExternalViewControllerProtocol>
-@end
+/*
+ RNWordPressEditorViewController
+ 
+ The editor ViewController which inherits from the WordPress one. Implements RCCExternalViewControllerProtocol so it can be pushed by react-native-controllers
+ */
 
-@interface BlogEditorManager : NSObject <RCTBridgeModule>
+
+extern NSString* const EditorDidPressMediaNotification;
+
+@interface RNWordPressEditorViewController : WPEditorViewController <WPEditorViewControllerDelegate, RCCExternalViewControllerProtocol>
+
+@property (nonatomic, strong) NSArray *pendingImagesToAdd;
+
++(RNWordPressEditorViewController*)getActiveInstance;
+
+-(void)setInitialTitleAndBody;
+-(BOOL)initialPostChanged;
+-(NSDictionary*)coverImageData;
+-(void)addImages:(NSArray*)images;
+
 @end
