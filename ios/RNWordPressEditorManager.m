@@ -109,11 +109,11 @@ RCT_EXPORT_METHOD(getPostData:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromi
     return;
   }
   
-  NSString *titleText = activeEditor.titleText;
-  NSString *mediaText = activeEditor.bodyText;
+  NSString *title = activeEditor.titleText;
+  NSString *body = activeEditor.bodyText;
   
-  NSMutableDictionary *result = [@{@"titleText": titleText != nil ? titleText : @"",
-                                   @"mediaText": mediaText != nil ? mediaText : @""} mutableCopy];
+  NSMutableDictionary *result = [@{@"title": title != nil ? title : @"",
+                                   @"body": body != nil ? body : @""} mutableCopy];
   
   
   NSDictionary *coverImageData = [activeEditor coverImageData];
