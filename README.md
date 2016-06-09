@@ -1,4 +1,4 @@
-# React Native WordPress Editor
+# React Native WordPress Rich Text Editor
 
 React Native Wrapper for [WordPress Rich Text Editor](https://github.com/wordpress-mobile/WordPress-Editor-iOS). The WordPress-Editor is the text editor used in the official WordPress mobile [apps](https://github.com/wordpress-mobile) to create and edit pages & posts. In short it's a simple, straightforward way to visually edit HTML.
 
