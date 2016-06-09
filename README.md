@@ -4,6 +4,11 @@ React Native Wrapper for [WordPress Rich Text Editor](https://github.com/wordpre
 
 > Current experimental implementation is for iOS only.
 
+<br>
+<p align="left">
+  <img src="http://i.imgur.com/nFDjKO5.png" width="350"/>
+</p>
+
 ### Dependencies
 
 * [native code for the original editor](https://github.com/wordpress-mobile/WordPress-Editor-iOS) (a git submodule) - actually taken from this [leaner fork](https://github.com/wix/WordPress-Editor-iOS)
@@ -18,6 +23,8 @@ In order to integrate a `UIViewController` with RN, we have to turn to the libra
 
 ### Installation
 
+* Make sure your project relies on React Native >= 0.25
+
 * Make sure your project uses **react-native-navigation** and that you've followed the **Installation** instructions [there](https://github.com/wix/react-native-navigation)
 
 * In your RN project root run:<br>`npm install react-native-wordpress-editor --save`
@@ -26,3 +33,61 @@ In order to integrate a `UIViewController` with RN, we have to turn to the libra
 
 ### Usage
 
+#### For a fully working example look [here](example)
+
+First, create a placeholder screen for the editor. The main purpose of this screen is to handle navigation events. See an example [here](https://github.com/wix/react-native-wordpress-editor/blob/master/example/EditorScreen.js).
+
+> Note: Make sure your screen component has been registered with `Navigation.registerComponent` like all react-native-navigation screens need to be, [example](https://github.com/wix/react-native-wordpress-editor/blob/master/example/index.ios.js).
+
+Now, to display your screen, from within one of your other app screens, push the editor:
+
+```js
+this.props.navigator.push({
+  screen: 'example.EditorScreen',
+  title: 'Preview',
+  passProps: {
+    externalNativeScreenClass: 'RNWordPressEditorViewController',
+    externalNativeScreenProps: {
+      // the post to open in the editor, leave empty for no post
+      post: {
+        // title of the post
+        title: 'Hello WorldPress', 
+        // html body of the post
+        body: 'cool HTML body <br><br> <img src="https://www.wpshrug.com/wp-content/uploads/2016/05/wordpress-winning-meme.jpg" />'
+      },
+      // if no post shown, these placeholders will appear in the relevant fields
+      placeHolders: {
+        title: 'title',
+        body: 'body'
+      }
+    }
+  }
+});
+```
+
+### API Reference
+
+Once the editor screen is displayed, you can communicate with it using a JS interface.
+
+```js
+import EditorManager from 'react-native-wordpress-editor';
+```
+
+* **`EditorManager.setEditingState(editing: boolean)`**
+<br>Switch between editing and preview modes (accepts a boolean).
+
+* **`EditorManager.resetStateToInitial()`**
+<br>Reset to the initial state right after the screen was pushed (with original props).
+
+* **`EditorManager.isPostChanged(): Promise<boolean>`**
+<br>Returns a promise of a boolean (since it's async) whether the state is still the initial one.
+
+* **`EditorManager.getPostData(): Promise<{title: string, body: string}>`**
+<br>Returns a promise of a simple object holding the `title` and HTML `body` of the post.
+
+* **`EditorManager.addImages(images: Array<{url: string}>)`**
+<br>Adds images at the current cursor location in the editor, takes an array of simple objects with the `url` of each image.
+
+### License
+
+Code in this git repo is licensed MIT, please consider the licenses of the [dependencies](https://github.com/wordpress-mobile/WordPress-Editor-iOS) separately.
