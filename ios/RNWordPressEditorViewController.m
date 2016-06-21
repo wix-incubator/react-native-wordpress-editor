@@ -209,9 +209,9 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   
   self.view.backgroundColor = [UIColor whiteColor];
   
-  if(self.props[@"DisableButtons"])
+  if(self.props[@"HideToolbarButtons"])
   {
-    for (NSString *element in self.props[@"DisableButtons"])
+    for (NSString *element in self.props[@"HideToolbarButtons"])
     {
       [self.toolbarView toolBarItemWithTag:[self elementTagFromString:element] setVisible:NO];
     }
