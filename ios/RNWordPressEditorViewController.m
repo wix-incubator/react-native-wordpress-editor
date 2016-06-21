@@ -11,6 +11,7 @@
 #import "RCTRootView.h"
 #import "RCCManager.h"
 #import "RCTHelpers.h"
+#import "RCTConvert.h"
 
 NSString* const EditorDidPressMediaNotification = @"EditorDidPressMedia";
 
@@ -209,12 +210,37 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   
   self.view.backgroundColor = [UIColor whiteColor];
   
-  if(self.props[@"HideToolbarButtons"])
+  if(self.props[@"hideToolbarButtons"])
   {
-    for (NSString *element in self.props[@"HideToolbarButtons"])
+    for (NSString *element in self.props[@"hideToolbarButtons"])
     {
       [self.toolbarView toolBarItemWithTag:[self elementTagFromString:element] setVisible:NO];
     }
+  }
+  
+  if ([self.props valueForKeyPath:@"toolbarStyle.iconTintColor"])
+  {
+    [self.toolbarView setItemTintColor:[RCTConvert UIColor:[self.props valueForKeyPath:@"toolbarStyle.iconTintColor"]]];
+  }
+  
+  if ([self.props valueForKeyPath:@"toolbarStyle.disabledIconTintColor"])
+  {
+    [self.toolbarView setDisabledItemTintColor:[RCTConvert UIColor:[self.props valueForKeyPath:@"toolbarStyle.disabledIconTintColor"]]];
+  }
+  
+  if ([self.props valueForKeyPath:@"toolbarStyle.selectedIconTintColor"])
+  {
+    [self.toolbarView setSelectedItemTintColor:[RCTConvert UIColor:[self.props valueForKeyPath:@"toolbarStyle.selectedIconTintColor"]]];
+  }
+  
+  if ([self.props valueForKeyPath:@"toolbarStyle.topBorderColor"])
+  {
+    [self.toolbarView setBorderColor:[RCTConvert UIColor:[self.props valueForKeyPath:@"toolbarStyle.topBorderColor"]]];
+  }
+  
+  if ([self.props valueForKeyPath:@"toolbarStyle.backgroundColor"])
+  {
+    [self.toolbarView setBackgroundColor:[RCTConvert UIColor:[self.props valueForKeyPath:@"toolbarStyle.backgroundColor"]]];
   }
 }
 
