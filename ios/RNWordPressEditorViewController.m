@@ -161,7 +161,7 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   if ([elementTypeString isEqualToString:@"BlockQuoteBarButton"])
     return kWPEditorViewControllerElementTagBlockQuoteBarButton;
   
-  if ([elementTypeString isEqualToString:@"BlockQuoteBarButton"])
+  if ([elementTypeString isEqualToString:@"BoldBarButton"])
     return kWPEditorViewControllerElementTagBoldBarButton;
     
   if ([elementTypeString isEqualToString:@"ImageBarButton"])
