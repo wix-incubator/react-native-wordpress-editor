@@ -156,6 +156,41 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   }
 }
 
+-(WPEditorViewControllerElementTag)elementTagFromString:(NSString*)elementTypeString
+{
+  if ([elementTypeString isEqualToString:@"BlockQuoteBarButton"])
+    return kWPEditorViewControllerElementTagBlockQuoteBarButton;
+  
+  if ([elementTypeString isEqualToString:@"BlockQuoteBarButton"])
+    return kWPEditorViewControllerElementTagBoldBarButton;
+    
+  if ([elementTypeString isEqualToString:@"ImageBarButton"])
+    return kWPEditorViewControllerElementTagInsertImageBarButton;
+      
+  if ([elementTypeString isEqualToString:@"InsertLinkBarButton"])
+    return kWPEditorViewControllerElementTagInsertLinkBarButton;
+
+  if ([elementTypeString isEqualToString:@"ItalicBarButton"])
+    return kWPEditorViewControllerElementTagItalicBarButton;
+
+  if ([elementTypeString isEqualToString:@"OrderedListBarButton"])
+    return kWPEditorViewControllerElementOrderedListBarButton;
+
+  if ([elementTypeString isEqualToString:@"ShowSourceBarButton"])
+    return kWPEditorViewControllerElementShowSourceBarButton;
+
+  if ([elementTypeString isEqualToString:@"iPhoneShowSourceBarButton"])
+    return kWPEditorViewControllerElementiPhoneShowSourceBarButton;
+
+  if ([elementTypeString isEqualToString:@"StrikeThroughBarButton"])
+    return kWPEditorViewControllerElementStrikeThroughBarButton;
+
+  if ([elementTypeString isEqualToString:@"UnorderedListBarButton"])
+    return kWPEditorViewControllerElementUnorderedListBarButton;
+  
+  return kWPEditorViewControllerElementTagUnknown;
+}
+
 - (void)customizeAppearance
 {
   [super customizeAppearance];
@@ -173,6 +208,14 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   }
   
   self.view.backgroundColor = [UIColor whiteColor];
+  
+  if(self.props[@"DisableButtons"])
+  {
+    for (NSString *element in self.props[@"DisableButtons"])
+    {
+      [self.toolbarView toolBarItemWithTag:[self elementTagFromString:element] setVisible:NO];
+    }
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
