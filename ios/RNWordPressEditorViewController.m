@@ -210,6 +210,14 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   
   self.view.backgroundColor = [UIColor whiteColor];
   
+  if(self.props[@"removeToolbarButtons"])
+  {
+    for (NSString *element in self.props[@"removeToolbarButtons"])
+    {
+      [self.toolbarView removeToolBarItemWithTag:[self elementTagFromString:element]];
+    }
+  }
+  
   if(self.props[@"hideToolbarButtons"])
   {
     for (NSString *element in self.props[@"hideToolbarButtons"])
