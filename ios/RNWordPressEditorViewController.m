@@ -409,19 +409,25 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
 
 -(void)addImages:(NSArray*)images
 {
-  NSBundle* editorBundle = [NSBundle bundleForClass:[self class]];
-  NSString *palceholderImagePath = [editorBundle pathForResource:@"placeholder@2x.png" ofType:@""];
-  
   [self.allMediaAdded addObjectsFromArray:images];
   
   for (NSDictionary *imageURLData in images)
   {
     NSString *url = imageURLData[@"url"];
-    NSString *imageID = [[NSUUID UUID] UUIDString];
+    NSString *localPlaceholderUrl = imageURLData[@"localPlaceholderUrl"];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [self.editorView insertLocalImage:palceholderImagePath uniqueId:imageID];
-      [self.editorView replaceLocalImageWithRemoteImage:url uniqueId:imageID mediaId:[@(arc4random()) stringValue]];
+    dispatch_async(dispatch_get_main_queue(), ^
+    {
+      if (localPlaceholderUrl != nil && [[NSFileManager defaultManager] fileExistsAtPath:localPlaceholderUrl])
+      {
+        NSString *imageID = [[NSUUID UUID] UUIDString];
+        [self.editorView insertLocalImage:localPlaceholderUrl uniqueId:imageID];
+        [self.editorView replaceLocalImageWithRemoteImage:url uniqueId:imageID mediaId:[@(arc4random()) stringValue]];
+      }
+      else
+      {
+        [self.editorView insertImage:url alt:@""];
+      }
     });
   }
 }
