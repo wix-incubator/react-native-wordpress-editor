@@ -150,4 +150,15 @@ RCT_EXPORT_METHOD(addImages:(NSArray*)imageURLs)
   self.activeBlogEditorForPhotos.pendingImagesToAdd = imageURLs;
 }
 
+RCT_EXPORT_METHOD(setBottomToolbarHidden:(BOOL)hidden)
+{
+  RNWordPressEditorViewController *activeEditor = [RNWordPressEditorViewController getActiveInstance];
+  if (activeEditor == nil)
+  {
+    return;
+  }
+  
+  [activeEditor setBottomToolbarHidden:hidden];
+}
+
 @end

@@ -533,4 +533,12 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   return coverImageData;
 }
 
+-(void)setBottomToolbarHidden:(BOOL)hidden
+{
+  if (self.bottomToolbarRCTView != nil)
+  {
+    self.bottomToolbarRCTView.hidden = hidden;
+  }
+}
+
 @end
