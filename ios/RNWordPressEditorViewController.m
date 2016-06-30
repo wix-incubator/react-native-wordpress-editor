@@ -250,6 +250,11 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   {
     [self.toolbarView setBackgroundColor:[RCTConvert UIColor:[self.props valueForKeyPath:@"toolbarStyle.backgroundColor"]]];
   }
+  
+  if ([self.props valueForKeyPath:@"placeholderColor"])
+  {
+    self.placeholderColor = [RCTConvert UIColor:[self.props valueForKeyPath:@"placeholderColor"]];
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
