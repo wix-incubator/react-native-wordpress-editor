@@ -12,6 +12,7 @@
 #import "RCCManager.h"
 #import "RCTHelpers.h"
 #import "RCTConvert.h"
+#import "WPEditorField.h"
 
 NSString* const EditorDidPressMediaNotification = @"EditorDidPressMedia";
 
@@ -533,11 +534,40 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   return coverImageData;
 }
 
--(void)setBottomToolbarHidden:(BOOL)hidden
+-(void)setBottomToolbarHidden:(BOOL)hidden animated:(BOOL)animated
 {
   if (self.bottomToolbarRCTView != nil)
   {
-    self.bottomToolbarRCTView.hidden = hidden;
+    CGFloat alpha = hidden ? 0 : 1;
+    CGAffineTransform transform = hidden ? CGAffineTransformMakeTranslation(0, self.bottomToolbarRCTView.frame.size.height) : CGAffineTransformIdentity;
+    if (animated)
+    {
+      [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^(){
+        self.bottomToolbarRCTView.alpha = alpha;
+        self.bottomToolbarRCTView.transform = transform;
+      } completion: nil];
+    }
+    else
+    {
+      self.bottomToolbarRCTView.alpha = alpha;
+      self.bottomToolbarRCTView.transform = transform;
+    }
+  }
+}
+
+-(void)dismissKeyboardIfEditing
+{
+  if (self.editing && self.editorView.focusedField != nil)
+  {
+    [self.editorView.focusedField blur];
+  }
+}
+
+-(void)showKeyboardIfEditing
+{
+  if (self.editing && self.editorView.focusedField == nil)
+  {
+    [self.editorView.titleField focus];
   }
 }
 

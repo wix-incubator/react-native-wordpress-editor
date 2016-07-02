@@ -29,6 +29,8 @@ extern NSString* const EditorDidPressMediaNotification;
 -(BOOL)initialPostChanged;
 -(NSDictionary*)coverImageData;
 -(void)addImages:(NSArray*)images;
--(void)setBottomToolbarHidden:(BOOL)hidden;
+-(void)setBottomToolbarHidden:(BOOL)hidden animated:(BOOL)animated;
+-(void)dismissKeyboardIfEditing;
+-(void)showKeyboardIfEditing;
 
 @end

@@ -77,6 +77,28 @@ RCT_EXPORT_METHOD(setEditingState:(BOOL)editing)
   }
 }
 
+RCT_EXPORT_METHOD(dismissKeyboardIfEditing)
+{
+  RNWordPressEditorViewController *activeEditor = [RNWordPressEditorViewController getActiveInstance];
+  if (activeEditor == nil)
+  {
+    return;
+  }
+  
+  [activeEditor dismissKeyboardIfEditing];
+}
+
+RCT_EXPORT_METHOD(showKeyboardIfEditing)
+{
+  RNWordPressEditorViewController *activeEditor = [RNWordPressEditorViewController getActiveInstance];
+  if (activeEditor == nil)
+  {
+    return;
+  }
+  
+  [activeEditor showKeyboardIfEditing];
+}
+
 RCT_EXPORT_METHOD(resetStateToInitial)
 {
   RNWordPressEditorViewController *activeEditor = [RNWordPressEditorViewController getActiveInstance];
@@ -150,7 +172,7 @@ RCT_EXPORT_METHOD(addImages:(NSArray*)imageURLs)
   self.activeBlogEditorForPhotos.pendingImagesToAdd = imageURLs;
 }
 
-RCT_EXPORT_METHOD(setBottomToolbarHidden:(BOOL)hidden)
+RCT_EXPORT_METHOD(setBottomToolbarHidden:(BOOL)hidden animated:(BOOL)animated)
 {
   RNWordPressEditorViewController *activeEditor = [RNWordPressEditorViewController getActiveInstance];
   if (activeEditor == nil)
@@ -158,7 +180,7 @@ RCT_EXPORT_METHOD(setBottomToolbarHidden:(BOOL)hidden)
     return;
   }
   
-  [activeEditor setBottomToolbarHidden:hidden];
+  [activeEditor setBottomToolbarHidden:hidden animated:animated];
 }
 
 @end
