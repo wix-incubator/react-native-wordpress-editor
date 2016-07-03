@@ -133,6 +133,11 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
       [self.bottomToolbarRCTView.contentView.layer addObserver:self forKeyPath:@"frame" options:0 context:nil];
       [self.bottomToolbarRCTView.contentView.layer addObserver:self forKeyPath:@"bounds" options:0 context:NULL];
     }
+    
+    if ([[props valueForKeyPath:@"BottomBarComponent.initiallyHidden"] boolValue])
+    {
+      [self setBottomToolbarHidden:YES animated:NO];
+    }
   }
 }
 
