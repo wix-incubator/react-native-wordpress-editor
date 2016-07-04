@@ -501,8 +501,11 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
 
 -(BOOL)initialPostChanged
 {
-  BOOL titleChanged = ![self.titleText isEqualToString:self.initialTitleHtml];
-  BOOL bodyChanged = ![self.bodyText isEqualToString:self.initialBodyHtml];
+  NSString *initialTitleHtmlText = (self.initialTitleHtml == nil) ? @"" : self.initialTitleHtml;
+  NSString *initialBodyHtmlText = (self.initialBodyHtml == nil) ? @"" : self.initialBodyHtml;
+  
+  BOOL titleChanged = ![self.titleText isEqualToString:initialTitleHtmlText];
+  BOOL bodyChanged = ![self.bodyText isEqualToString:initialBodyHtmlText];
   return (titleChanged || bodyChanged);
 }
 
