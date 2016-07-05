@@ -425,11 +425,22 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
   for (NSDictionary *imageURLData in images)
   {
     NSString *url = imageURLData[@"url"];
-    NSString *localPlaceholderUrl = imageURLData[@"localPlaceholderUrl"];
+    __block NSString *localPlaceholderUrl = imageURLData[@"localPlaceholderUrl"];
     
     dispatch_async(dispatch_get_main_queue(), ^
     {
-      if (localPlaceholderUrl != nil && [[NSFileManager defaultManager] fileExistsAtPath:localPlaceholderUrl])
+      BOOL placeholderImageExists = NO;
+      if (localPlaceholderUrl != nil && ![[NSFileManager defaultManager] fileExistsAtPath:localPlaceholderUrl])
+      {
+        NSBundle* editorBundle = [NSBundle bundleForClass:[self class]];
+        localPlaceholderUrl = [editorBundle pathForResource:localPlaceholderUrl ofType:@""];
+        if (localPlaceholderUrl != nil)
+        {
+          placeholderImageExists = YES;
+        }
+      }
+      
+      if (placeholderImageExists)
       {
         NSString *imageID = [[NSUUID UUID] UUIDString];
         [self.editorView insertLocalImage:localPlaceholderUrl uniqueId:imageID];
