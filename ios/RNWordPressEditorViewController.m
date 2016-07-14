@@ -267,8 +267,6 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
 {
   [super viewWillAppear:animated];
   
-  gActiveBlogEditorViewController = self;
-  
   [self.controllerDelegate setStyleOnAppearForViewController:self];
 }
 
@@ -296,6 +294,8 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
 -(void)viewDidAppear:(BOOL)animated
 {
   [super viewDidAppear:animated];
+  
+  gActiveBlogEditorViewController = self;
   
   if(self.startEditingOnFirstAppear)
   {
