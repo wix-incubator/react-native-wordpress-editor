@@ -139,6 +139,8 @@ NSString *const DefaultDesktopEditOnlyBlurBackground = @"none";
       [self setBottomToolbarHidden:YES animated:NO];
     }
   }
+  
+  self.titleFocusHidesToolbar = [props[@"titleFocusHidesToolbar"] boolValue];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
