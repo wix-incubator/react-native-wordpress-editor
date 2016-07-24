@@ -1,3 +1,6 @@
 [submodule "ios/WordPress-Editor-iOS"]
 	path = ios/WordPress-Editor-iOS
 	url = https://github.com/wix/WordPress-Editor-iOS
+[submodule "android/WordPressAndroid"]
+	path = android/WordPressAndroid
+	url = git@github.com:wix/WordPress-Editor-Android.git
