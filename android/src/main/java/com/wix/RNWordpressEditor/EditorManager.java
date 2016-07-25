@@ -47,7 +47,7 @@ public class EditorManager /*extends ReactContextBaseJavaModule*/ implements Edi
 
     @ReactMethod
     public void setBottomToolbarHidden(boolean animated){
-        //TODO
+        editorFragment.hideToolbar(animated);
     }
 
     @ReactMethod
@@ -77,12 +77,18 @@ public class EditorManager /*extends ReactContextBaseJavaModule*/ implements Edi
 
     @ReactMethod
     public void isPostChanged(Promise promise){
-        //TODO
+        String title = editorFragment.getTitle().toString();
+        String body = editorFragment.getContent().toString();
+        boolean changed = !title.equals(originalTitle) || !body.equals(originalBody);
+//        promise.resolve(changed);
+        Toast.makeText(editorFragment.getActivity(), "changed? " + changed, Toast.LENGTH_SHORT).show();
     }
 
     @ReactMethod
     public void resetStateToInitial(){
-        //TODO
+        editorFragment.setTitle(originalTitle);
+        editorFragment.setContent(originalBody);
+        editorFragment.updateVisualEditorFields();
     }
 
     @ReactMethod
