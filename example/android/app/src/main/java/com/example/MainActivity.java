@@ -24,41 +24,30 @@ package com.example;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toolbar;
 
-import com.facebook.quicklog.identifiers.ReactNativeBridge;
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.ReadableMap;
-import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.shell.MainReactPackage;
-import com.reactnativenavigation.packages.RnnPackage;
-
-import org.wordpress.android.editor.EditorFragmentAbstract;
-import org.wordpress.android.util.helpers.MediaFile;
+import com.wix.RNWordpressEditor.EditorManager;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class MainActivity extends AppCompatActivity implements EditorFragmentAbstract.EditorFragmentListener{
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         FrameLayout frame = new FrameLayout(this);
         frame.setId(1);
         setContentView(frame);
-
-//        WritableMap map = Arguments.createMap();
-//        WritableMap wProps = Arguments.createMap();
-//        WritableMap post = Arguments.createMap();
-//        post.putString("title", "Hello WorldPress");
-//        post.putString("body", "cool HTML body <br><br> <img src=\"https://www.wpshrug.com/wp-content/uploads/2016/05/wordpress-winning-meme.jpg\" />");
-//        wProps.putMap("post", post);
-//        map.putMap("props", wProps);
-//        ReadableMap props = map.getMap("props");
 
         Bundle props = new Bundle();
         Bundle post = new Bundle();
@@ -87,53 +76,24 @@ public class MainActivity extends AppCompatActivity implements EditorFragmentAbs
         }
     }
 
-    @Override
-    public void onEditorFragmentInitialized() {
+    ////////////
+    private boolean editable = true;
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(Menu.NONE, 0, Menu.NONE, "Toggle editing");
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-    public void onSettingsClicked() {
-
-    }
-
-    @Override
-    public void onAddMediaClicked() {
-
-    }
-
-    @Override
-    public void onMediaRetryClicked(String mediaId) {
-
-    }
-
-    @Override
-    public void onMediaUploadCancelClicked(String mediaId, boolean delete) {
-
-    }
-
-    @Override
-    public void onFeaturedImageChanged(long mediaId) {
-
-    }
-
-    @Override
-    public void onVideoPressInfoRequested(String videoId) {
-
-    }
-
-    @Override
-    public String onAuthHeaderRequested(String url) {
-        return null;
-    }
-
-    @Override
-    public void saveMediaFile(MediaFile mediaFile) {
-
-    }
-
-    @Override
-    public void onTrackableEvent(EditorFragmentAbstract.TrackableEvent event) {
-
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case 0:
+                editable = !editable;
+                EditorManager.getInstance().setEditingState(editable);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
