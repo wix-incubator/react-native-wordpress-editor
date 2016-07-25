@@ -10,21 +10,30 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 
 import org.wordpress.android.editor.EditorFragment;
+import org.wordpress.android.editor.EditorFragmentAbstract;
+import org.wordpress.android.util.helpers.MediaFile;
 
 /**
  * Created by yedidyak on 24/07/2016.
  */
-public class EditorManager extends ReactContextBaseJavaModule{
+public class EditorManager /*extends ReactContextBaseJavaModule*/ implements EditorFragmentAbstract.EditorFragmentListener {
 
     private static EditorFragment editorFragment;
     private static String originalTitle = "";
     private static String originalBody = "";
 
-    public EditorManager(ReactApplicationContext reactContext) {
-        super(reactContext);
+    private static EditorManager instance;
+
+    public static EditorManager getInstance() {
+        return instance;
     }
 
-    @Override
+    public EditorManager() {//ReactApplicationContext reactContext) {
+        //super(reactContext);
+        instance = this;
+    }
+
+//    @Override
     public String getName() {
         return "RNWordPressEditorManager";
     }
@@ -86,11 +95,66 @@ public class EditorManager extends ReactContextBaseJavaModule{
             }
         }
 
-        editorFragment = EditorFragment.newInstance(originalTitle, originalBody);
+        //TODO this needs the reactContext
+        if (instance == null) {
+            new EditorManager();
+        }
+
+        editorFragment = EditorFragment.newInstance(instance, originalTitle, originalBody);
         editorFragment.setShowHtmlButtonVisible(false);
 
-        editorFragment.setEditable(false);
-
         return editorFragment;
+    }
+
+    //Listeners
+
+    @Override
+    public void onEditorFragmentInitialized() {
+
+    }
+
+    @Override
+    public void onSettingsClicked() {
+
+    }
+
+    @Override
+    public void onAddMediaClicked() {
+
+    }
+
+    @Override
+    public void onMediaRetryClicked(String mediaId) {
+
+    }
+
+    @Override
+    public void onMediaUploadCancelClicked(String mediaId, boolean delete) {
+
+    }
+
+    @Override
+    public void onFeaturedImageChanged(long mediaId) {
+
+    }
+
+    @Override
+    public void onVideoPressInfoRequested(String videoId) {
+
+    }
+
+    @Override
+    public String onAuthHeaderRequested(String url) {
+        return null;
+    }
+
+    @Override
+    public void saveMediaFile(MediaFile mediaFile) {
+
+    }
+
+    @Override
+    public void onTrackableEvent(EditorFragmentAbstract.TrackableEvent event) {
+
     }
 }
