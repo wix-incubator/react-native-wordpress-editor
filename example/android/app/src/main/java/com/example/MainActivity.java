@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(Menu.NONE, 0, Menu.NONE, "Toggle editing");
+        menu.add(Menu.NONE, 1, Menu.NONE, "Dismiss keyboard");
+        menu.add(Menu.NONE, 2, Menu.NONE, "Show keyboard if editing");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -91,6 +93,12 @@ public class MainActivity extends AppCompatActivity{
             case 0:
                 editable = !editable;
                 EditorManager.getInstance().setEditingState(editable);
+                return true;
+            case 1:
+                EditorManager.getInstance().dismissKeyboardIfEditing();
+                return true;
+            case 2:
+                EditorManager.getInstance().showKeyboardIfEditing();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
