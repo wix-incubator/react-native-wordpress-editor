@@ -24,19 +24,18 @@ package com.example;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.Toolbar;
 
 import com.wix.RNWordpressEditor.EditorManager;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -84,6 +83,8 @@ public class MainActivity extends AppCompatActivity{
         menu.add(Menu.NONE, 0, Menu.NONE, "Toggle editing");
         menu.add(Menu.NONE, 1, Menu.NONE, "Dismiss keyboard");
         menu.add(Menu.NONE, 2, Menu.NONE, "Show keyboard if editing");
+        menu.add(Menu.NONE, 3, Menu.NONE, "Append urls");
+        menu.add(Menu.NONE, 4, Menu.NONE, "getPostData");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -99,6 +100,14 @@ public class MainActivity extends AppCompatActivity{
                 return true;
             case 2:
                 EditorManager.getInstance().showKeyboardIfEditing();
+                return true;
+            case 3:
+                EditorManager.getInstance().addImages(Arrays.asList(
+                        "http://images5.fanpop.com/image/photos/30800000/-Random-random-30843841-1920-1080.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmVA-3wKULPQ8R-w8doY2ydkHsDbJpNYWN3ei6MkY8z6ASppZ-8ZzVPb4"));
+                return true;
+            case 4:
+                EditorManager.getInstance().getPostData(null);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
