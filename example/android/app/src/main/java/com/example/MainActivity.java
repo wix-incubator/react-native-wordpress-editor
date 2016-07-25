@@ -30,6 +30,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.wix.RNWordpressEditor.EditorManager;
 
@@ -85,6 +86,10 @@ public class MainActivity extends AppCompatActivity{
         menu.add(Menu.NONE, 2, Menu.NONE, "Show keyboard if editing");
         menu.add(Menu.NONE, 3, Menu.NONE, "Append urls");
         menu.add(Menu.NONE, 4, Menu.NONE, "getPostData");
+        menu.add(Menu.NONE, 5, Menu.NONE, "isPostChanged?");
+        menu.add(Menu.NONE, 6, Menu.NONE, "reset to initial");
+        menu.add(Menu.NONE, 7, Menu.NONE, "hide toolbar animated");
+        menu.add(Menu.NONE, 8, Menu.NONE, "hide toolbar not animated");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -108,6 +113,18 @@ public class MainActivity extends AppCompatActivity{
                 return true;
             case 4:
                 EditorManager.getInstance().getPostData(null);
+                return true;
+            case 5:
+                EditorManager.getInstance().isPostChanged(null);
+                return true;
+            case 6:
+                EditorManager.getInstance().resetStateToInitial();
+                return true;
+            case 7:
+                EditorManager.getInstance().setBottomToolbarHidden(true);
+                return true;
+            case 8:
+                EditorManager.getInstance().setBottomToolbarHidden(false);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
