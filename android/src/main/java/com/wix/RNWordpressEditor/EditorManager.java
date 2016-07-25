@@ -65,12 +65,12 @@ public class EditorManager /*extends ReactContextBaseJavaModule*/ implements Edi
 
     @ReactMethod
     public void showKeyboardIfEditing(){
-        //TODO
+        editorFragment.showKeyboardIfEditing();
     }
 
     @ReactMethod
     public void dismissKeyboardIfEditing(){
-        //TODO
+        editorFragment.dismissKeyboard();
     }
 
     @ReactMethod
