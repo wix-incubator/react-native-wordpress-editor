@@ -1,17 +1,24 @@
 package com.wix.RNWordpressEditor;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableMap;
 
 import org.wordpress.android.editor.EditorFragment;
 import org.wordpress.android.editor.EditorFragmentAbstract;
 import org.wordpress.android.util.helpers.MediaFile;
+import org.wordpress.android.util.helpers.MediaGallery;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by yedidyak on 24/07/2016.
@@ -44,13 +51,28 @@ public class EditorManager /*extends ReactContextBaseJavaModule*/ implements Edi
     }
 
     @ReactMethod
-    public void addImages(ReadableArray images){
-        //TODO
+//    public void addImages(ReadableArray images){
+    public void addImages(List<String> images){
+        for(int i = 0; i < images.size(); i++) {
+//            String url = images.getString(i);
+            String url = images.get(i);
+            editorFragment.appendMediaFile(url);
+        }
     }
 
     @ReactMethod
     public void getPostData(Promise promise){
-        //TODO
+
+        CharSequence title = editorFragment.getTitle();
+        CharSequence body = editorFragment.getContent();
+
+//        WritableMap post = Arguments.createMap();
+//        post.putString("title", title.toString());
+//        post.putString("body", body.toString());
+//        promise.resolve(post);
+
+        Toast.makeText(editorFragment.getActivity(), title.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(editorFragment.getActivity(), body.toString(), Toast.LENGTH_SHORT).show();
     }
 
     @ReactMethod
