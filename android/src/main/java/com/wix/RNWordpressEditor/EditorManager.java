@@ -66,7 +66,14 @@ public class EditorManager extends ReactContextBaseJavaModule{
 
     @ReactMethod
     public void setEditingState(boolean isEditing){
-        //TODO
+        validateFragment("setEditingState");
+        editorFragment.setEditable(isEditing);
+    }
+
+    private void validateFragment(String method) {
+        if(editorFragment == null) {
+            throw new RuntimeException("Called " + method + " when there was no EditorFragment!");
+        }
     }
 
     public static EditorFragment getFragment(Bundle props) {
@@ -81,6 +88,9 @@ public class EditorManager extends ReactContextBaseJavaModule{
 
         editorFragment = EditorFragment.newInstance(originalTitle, originalBody);
         editorFragment.setShowHtmlButtonVisible(false);
+
+        editorFragment.setEditable(false);
+
         return editorFragment;
     }
 }
