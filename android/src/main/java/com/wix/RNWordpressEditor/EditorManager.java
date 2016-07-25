@@ -1,15 +1,24 @@
 package com.wix.RNWordpressEditor;
 
+import android.os.Bundle;
+
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.ReadableMap;
+
+import org.wordpress.android.editor.EditorFragment;
 
 /**
  * Created by yedidyak on 24/07/2016.
  */
 public class EditorManager extends ReactContextBaseJavaModule{
+
+    private static EditorFragment editorFragment;
+    private static String originalTitle = "";
+    private static String originalBody = "";
 
     public EditorManager(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -58,5 +67,20 @@ public class EditorManager extends ReactContextBaseJavaModule{
     @ReactMethod
     public void setEditingState(boolean isEditing){
         //TODO
+    }
+
+    public static EditorFragment getFragment(Bundle props) {
+
+        if (props != null) {
+            Bundle post = props.getBundle("post");
+            if (post != null) {
+                originalTitle = post.getString("title");
+                originalBody = post.getString("body");
+            }
+        }
+
+        editorFragment = EditorFragment.newInstance(originalTitle, originalBody);
+        editorFragment.setShowHtmlButtonVisible(false);
+        return editorFragment;
     }
 }
