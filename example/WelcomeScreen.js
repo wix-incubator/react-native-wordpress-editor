@@ -3,22 +3,40 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity, Platform
 } from 'react-native';
 
 export default class WelcomeScreen extends Component {
   onPress() {
-    this.props.navigator.push({
-      screen: 'example.EditorScreen',
-      title: 'Preview',
-      passProps: {
-        externalNativeScreenClass: 'RNWordPressEditorViewController',
-        externalNativeScreenProps: {
-          post: {title: 'Hello WorldPress', body: 'cool HTML body <br><br> <img src="https://www.wpshrug.com/wp-content/uploads/2016/05/wordpress-winning-meme.jpg" />'},
-          placeHolders: {title: 'title', body: 'body'}
+    if(Platform.OS === 'ios') {
+      this.props.navigator.push({
+        screen: 'example.EditorScreen',
+        title: 'Preview',
+        passProps: {
+          externalNativeScreenClass: 'RNWordPressEditorViewController',
+          externalNativeScreenProps: {
+            post: {
+              title: 'Hello WorldPress',
+              body: 'cool HTML body <br><br> <img src="https://www.wpshrug.com/wp-content/uploads/2016/05/wordpress-winning-meme.jpg" />'
+            },
+            placeHolders: {title: 'title', body: 'body'}
+          }
         }
-      }
-    });
+      });
+    } else {
+      this.props.navigator.push({
+        screen: 'example.EditorScreen',
+        title: 'Preview',
+        passProps: {
+          post: {
+            title: 'Hello WorldPress',
+            body: 'cool HTML body <br><br> <img src="https://www.wpshrug.com/wp-content/uploads/2016/05/wordpress-winning-meme.jpg" />'
+          },
+          placeHolders: {title: 'title', body: 'body'}
+        },
+        fragmentCreatorClassName: 'com.wix.RNWordpressEditor.EditorManager'
+      });
+    }
   }
 
   render() {

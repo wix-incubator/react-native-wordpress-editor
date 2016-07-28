@@ -33,7 +33,7 @@ export default class EditorScreen extends Component {
           id: 'done'
         }
       ]});
-      this.props.navigator.setTitle({title: 'Edit'});
+      this.props.navigator.setTitle('Edit');
     } else {
       this.props.navigator.setButtons({rightButtons: [
         {
@@ -41,7 +41,7 @@ export default class EditorScreen extends Component {
           id: 'edit'
         }
       ]});
-      this.props.navigator.setTitle({title: 'Preview'});
+      this.props.navigator.setTitle('Preview');
     }
     EditorManager.setEditingState(editing);
   }
