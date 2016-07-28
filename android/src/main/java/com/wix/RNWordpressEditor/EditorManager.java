@@ -1,7 +1,6 @@
 package com.wix.RNWordpressEditor;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
@@ -9,21 +8,16 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
-import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 
 import org.wordpress.android.editor.EditorFragment;
 import org.wordpress.android.editor.EditorFragmentAbstract;
 import org.wordpress.android.util.helpers.MediaFile;
-import org.wordpress.android.util.helpers.MediaGallery;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by yedidyak on 24/07/2016.
  */
-public class EditorManager /*extends ReactContextBaseJavaModule*/ implements EditorFragmentAbstract.EditorFragmentListener {
+public class EditorManager extends ReactContextBaseJavaModule implements EditorFragmentAbstract.EditorFragmentListener {
 
     private static EditorFragment editorFragment;
     private static String originalTitle = "";
@@ -35,76 +29,110 @@ public class EditorManager /*extends ReactContextBaseJavaModule*/ implements Edi
         return instance;
     }
 
-    public EditorManager() {//ReactApplicationContext reactContext) {
-        //super(reactContext);
+    public EditorManager(ReactApplicationContext reactContext) {
+        super(reactContext);
         instance = this;
     }
 
-//    @Override
+    //    @Override
     public String getName() {
         return "RNWordPressEditorManager";
     }
 
     @ReactMethod
-    public void setBottomToolbarHidden(boolean animated){
-        editorFragment.hideToolbar(animated);
+    public void setBottomToolbarHidden(final boolean animated){
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                editorFragment.hideToolbar(animated);
+            }
+        });
     }
 
     @ReactMethod
-//    public void addImages(ReadableArray images){
-    public void addImages(List<String> images){
-        for(int i = 0; i < images.size(); i++) {
-//            String url = images.getString(i);
-            String url = images.get(i);
-            editorFragment.appendMediaFile(url);
-        }
+    public void addImages(final ReadableArray images){
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                for(int i = 0; i < images.size(); i++) {
+                    String url = images.getString(i);
+                    editorFragment.appendMediaFile(url);
+                }
+            }
+        });
     }
 
     @ReactMethod
-    public void getPostData(Promise promise){
+    public void getPostData(final Promise promise){
 
-        CharSequence title = editorFragment.getTitle();
-        CharSequence body = editorFragment.getContent();
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                CharSequence title = editorFragment.getTitle();
+                CharSequence body = editorFragment.getContent();
 
-//        WritableMap post = Arguments.createMap();
-//        post.putString("title", title.toString());
-//        post.putString("body", body.toString());
-//        promise.resolve(post);
-
-        Toast.makeText(editorFragment.getActivity(), title.toString(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(editorFragment.getActivity(), body.toString(), Toast.LENGTH_SHORT).show();
+                WritableMap post = Arguments.createMap();
+                post.putString("title", title.toString());
+                post.putString("body", body.toString());
+                promise.resolve(post);
+            }
+        });
     }
 
     @ReactMethod
-    public void isPostChanged(Promise promise){
-        String title = editorFragment.getTitle().toString();
-        String body = editorFragment.getContent().toString();
-        boolean changed = !title.equals(originalTitle) || !body.equals(originalBody);
-//        promise.resolve(changed);
-        Toast.makeText(editorFragment.getActivity(), "changed? " + changed, Toast.LENGTH_SHORT).show();
+    public void isPostChanged(final Promise promise){
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                String title = editorFragment.getTitle().toString();
+                String body = editorFragment.getContent().toString();
+                boolean changed = !title.equals(originalTitle) || !body.equals(originalBody);
+                promise.resolve(changed);
+            }
+        });
     }
 
     @ReactMethod
     public void resetStateToInitial(){
-        editorFragment.setTitle(originalTitle);
-        editorFragment.setContent(originalBody);
-        editorFragment.updateVisualEditorFields();
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                editorFragment.setTitle(originalTitle);
+                editorFragment.setContent(originalBody);
+                editorFragment.updateVisualEditorFields();
+            }
+        });
     }
 
     @ReactMethod
     public void showKeyboardIfEditing(){
-        editorFragment.showKeyboardIfEditing();
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                editorFragment.showKeyboardIfEditing();
+            }
+        });
     }
 
     @ReactMethod
     public void dismissKeyboardIfEditing(){
-        editorFragment.dismissKeyboard();
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                editorFragment.dismissKeyboard();
+            }
+        });
     }
 
     @ReactMethod
-    public void setEditingState(boolean isEditing){
+    public void setEditingState(final boolean isEditing){
         validateFragment("setEditingState");
-        editorFragment.setEditable(isEditing);
+        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
+            @Override
+            public void run() {
+                editorFragment.setEditable(isEditing);
+            }
+        });
     }
 
     private void validateFragment(String method) {
@@ -123,13 +151,9 @@ public class EditorManager /*extends ReactContextBaseJavaModule*/ implements Edi
             }
         }
 
-        //TODO this needs the reactContext
-        if (instance == null) {
-            new EditorManager();
-        }
-
         editorFragment = EditorFragment.newInstance(instance, originalTitle, originalBody);
         editorFragment.setShowHtmlButtonVisible(false);
+        editorFragment.setEditable(false);
 
         return editorFragment;
     }

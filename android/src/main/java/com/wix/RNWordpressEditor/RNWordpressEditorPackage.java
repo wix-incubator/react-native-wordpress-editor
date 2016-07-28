@@ -16,9 +16,7 @@ public class RNWordpressEditorPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        //TODO
-//      return Collections.<NativeModule>singletonList(new EditorManager(reactContext));
-        return Collections.emptyList();
+      return Collections.<NativeModule>singletonList(new EditorManager(reactContext));
     }
 
     @Override
