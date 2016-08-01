@@ -40,13 +40,8 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
     }
 
     @ReactMethod
-    public void setBottomToolbarHidden(final boolean animated){
-        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-            @Override
-            public void run() {
-                editorFragment.hideToolbar(animated);
-            }
-        });
+    public void setBottomToolbarHidden(final boolean hidden, final boolean animated){
+        //This is just here to match the iOS API, but the prduct doesn;t have a bottom toolbar
     }
 
     @ReactMethod
