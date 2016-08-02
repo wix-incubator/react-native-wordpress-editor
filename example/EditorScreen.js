@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import {NativeAppEventEmitter} from 'react-native';
 import EditorManager from 'react-native-wordpress-editor';
+
+
+let eventSubscribers = [];
 
 export default class EditorScreen extends Component {
   static navigatorButtons = {
@@ -15,6 +19,17 @@ export default class EditorScreen extends Component {
     super(props);
     // if you want to listen on navigator events, set this up
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+
+    var subscription = NativeAppEventEmitter.addListener(
+        'EventEditorDidPressMedia', () => {
+          console.warn('Clicked Add Media!');
+        }
+    );
+    eventSubscribers.push(subscription);
+  }
+
+  componentWillUnmount() {
+    eventSubscribers.forEach((eventListener) => eventListener.remove());
   }
 
   onNavigatorEvent(event) {
