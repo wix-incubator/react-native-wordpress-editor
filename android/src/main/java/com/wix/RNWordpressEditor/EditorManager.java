@@ -9,6 +9,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.modules.core.RCTNativeAppEventEmitter;
 
 import org.wordpress.android.editor.EditorFragment;
 import org.wordpress.android.editor.EditorFragmentAbstract;
@@ -167,7 +168,7 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
 
     @Override
     public void onAddMediaClicked() {
-
+        getReactApplicationContext().getJSModule(RCTNativeAppEventEmitter.class).emit("EventEditorDidPressMedia", null);
     }
 
     @Override
