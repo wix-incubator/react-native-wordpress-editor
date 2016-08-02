@@ -51,7 +51,7 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
             @Override
             public void run() {
                 for(int i = 0; i < images.size(); i++) {
-                    String url = images.getString(i);
+                    String url = images.getMap(i).getString("url");
                     editorFragment.appendMediaFile(url);
                 }
             }
