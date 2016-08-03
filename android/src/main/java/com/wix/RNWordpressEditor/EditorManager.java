@@ -139,17 +139,27 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
 
     public static EditorFragment getFragment(Bundle props) {
 
+        String placeholderTitle = "";
+        String placeholderBody = "";
+
         if (props != null) {
             Bundle post = props.getBundle("post");
             if (post != null) {
                 originalTitle = post.getString("title");
                 originalBody = post.getString("body");
             }
+            Bundle placeHolders = props.getBundle("placeHolders");
+            if (placeHolders != null) {
+                placeholderTitle = placeHolders.getString("title");
+                placeholderBody = placeHolders.getString("body");
+            }
         }
 
         editorFragment = EditorFragment.newInstance(instance, originalTitle, originalBody);
         editorFragment.setShowHtmlButtonVisible(false);
         editorFragment.setEditable(false);
+        editorFragment.setTitlePlaceholder(placeholderTitle);
+        editorFragment.setContentPlaceholder(placeholderBody);
 
         return editorFragment;
     }
