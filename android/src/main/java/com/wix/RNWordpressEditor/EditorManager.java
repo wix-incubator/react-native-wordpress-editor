@@ -141,12 +141,14 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
 
         String placeholderTitle = "";
         String placeholderBody = "";
+        boolean editable = false;
 
         if (props != null) {
             Bundle post = props.getBundle("post");
             if (post != null) {
                 originalTitle = post.getString("title");
                 originalBody = post.getString("body");
+                editable = post.getBoolean("isNewPost");
             }
             Bundle placeHolders = props.getBundle("placeHolders");
             if (placeHolders != null) {
@@ -157,7 +159,7 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
 
         editorFragment = EditorFragment.newInstance(instance, originalTitle, originalBody);
         editorFragment.setShowHtmlButtonVisible(false);
-        editorFragment.setEditable(false);
+        editorFragment.setEditable(editable);
         editorFragment.setTitlePlaceholder(placeholderTitle);
         editorFragment.setContentPlaceholder(placeholderBody);
 
