@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/wix/react-native-wordpress-editor.git"
   },
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "React Native Wrapper for WordPress Rich Text Editor. The WordPress-Editor is the text editor used in the official WordPress mobile apps to create and edit pages & posts",
   "nativePackage": true,
   "bugs": {
