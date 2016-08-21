@@ -162,6 +162,7 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
         editorFragment.setEditable(editable);
         editorFragment.setTitlePlaceholder(placeholderTitle);
         editorFragment.setContentPlaceholder(placeholderBody);
+        editorFragment.setEditorFragmentListener(instance);
 
         return editorFragment;
     }
