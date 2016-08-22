@@ -60,19 +60,18 @@ public class EditorManager extends ReactContextBaseJavaModule implements EditorF
 
     @ReactMethod
     public void getPostData(final Promise promise){
+        CharSequence title = editorFragment.getTitle();
+        CharSequence body = editorFragment.getContent();
 
-        getReactApplicationContext().runOnUiQueueThread(new Runnable() {
-            @Override
-            public void run() {
-                CharSequence title = editorFragment.getTitle();
-                CharSequence body = editorFragment.getContent();
+        if(title == null || body == null) {
+            promise.reject("EDITOR", "FAILED TO GET POST DATA");
+            return;
+        }
 
-                WritableMap post = Arguments.createMap();
-                post.putString("title", title.toString());
-                post.putString("body", body.toString());
-                promise.resolve(post);
-            }
-        });
+        WritableMap post = Arguments.createMap();
+        post.putString("title", title.toString());
+        post.putString("body", body.toString());
+        promise.resolve(post);
     }
 
     @ReactMethod
