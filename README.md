@@ -11,8 +11,6 @@ React Native Wrapper for [WordPress Rich Text Editor](https://github.com/wordpre
 
 ### Dependencies
 
-* [native code for the original editor](https://github.com/wordpress-mobile/WordPress-Editor-iOS) (a git submodule) - actually taken from this [leaner fork](https://github.com/wix/WordPress-Editor-iOS)
-
 * [react-native-navigation](https://github.com/wix/react-native-navigation) - native navigation library for React Native (required to natively display the editor within RN)
 
 ### How is integration possible?
@@ -51,7 +49,7 @@ this.props.navigator.push({
       // the post to open in the editor, leave empty for no post
       post: {
         // title of the post
-        title: 'Hello WorldPress', 
+        title: 'Hello WorldPress',
         // html body of the post
         body: 'cool HTML body <br><br> <img src="https://www.wpshrug.com/wp-content/uploads/2016/05/wordpress-winning-meme.jpg" />'
       },
@@ -90,4 +88,4 @@ import EditorManager from 'react-native-wordpress-editor';
 
 ### License
 
-Code in this git repo is licensed MIT, please consider the licenses of the [dependencies](https://github.com/wordpress-mobile/WordPress-Editor-iOS) separately.
+React Native WordPress Rich Text Editor is available under the GPL license. See the [LICENSE](https://raw.githubusercontent.com/wix/react-native-wordpress-editor/master/LICENSE) file for more info.
