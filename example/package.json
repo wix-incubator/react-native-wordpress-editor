@@ -10,6 +10,6 @@
     "react": "^15.1.0",
     "react-native": "^0.27.2",
     "react-native-navigation": "^2.0.0-experimental",
-    "react-native-wordpress-editor": "^1.0.0"
+    "react-native-wordpress-editor": "^2.0.0"
   }
 }
