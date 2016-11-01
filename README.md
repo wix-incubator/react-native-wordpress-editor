@@ -2,8 +2,6 @@
 
 React Native Wrapper for [WordPress Rich Text Editor](https://github.com/wordpress-mobile/WordPress-Editor-iOS). The WordPress-Editor is the text editor used in the official WordPress mobile [apps](https://github.com/wordpress-mobile) to create and edit pages & posts. In short it's a simple, straightforward way to visually edit HTML.
 
-> Current experimental implementation is for iOS only.
-
 <br>
 <p align="left">
   <img src="http://i.imgur.com/nFDjKO5.png" width="350"/>
@@ -88,6 +86,13 @@ import EditorManager from 'react-native-wordpress-editor';
 * **`EditorManager.addImages(images: Array<{url: string}>)`**
 <br>Adds images at the current cursor location in the editor, takes an array of simple objects with the `url` of each image.
 
+### Credits and Attributions
+
+This project depends on:
+
+* [WordPress-Editor-iOS](https://github.com/wix/WordPress-Editor-iOS)
+* [WordPress-Editor-Android](https://github.com/wix/WordPress-Editor-Android)
+
 ### License
 
-Code in this git repo is licensed MIT, please consider the licenses of the [dependencies](https://github.com/wordpress-mobile/WordPress-Editor-iOS) separately.
+See [LICENSE](LICENSE.md)
